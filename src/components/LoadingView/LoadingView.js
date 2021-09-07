@@ -27,13 +27,13 @@ export default class LoadingView{
         this.loader.classList.remove("animate__fadeOut");
         this.loader.style.display = "block";
     }
-    hideLoader(timeout = 0){
+    hideLoader(loadingDuration = 200){
         setTimeout(() => {
-            this.loader.classList.add("animate__fadeOut");
+            this.loader.classList.add("animate__fadeOut", "animate__faster");//animate__faster: animationDuration = 500ms
             setTimeout(()=>{
                 this.loader.style.display = "none";
             document.body.style.overflowY = "auto";
-            },800);
-        }, timeout);
+            }, 500);
+        }, loadingDuration);
     }
 }

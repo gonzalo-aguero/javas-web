@@ -37,17 +37,12 @@ header > nav{
     cursor:pointer;
 }
 .div-nav > img{
-    height: 80px;
+    font-size: 10px;
+    height: 7em;
+    margin: 1em;
 }
 .div-nav h1{
     font-size: 30px;
-    font-family: sans-serif;
-    font-weight: lighter;
-    color: var(--activedLogo_Dye);
-    line-height: 95%;
-}
-.div-nav h2{
-    font-size: 25px;
     font-family: sans-serif;
     font-weight: lighter;
     color: var(--titlePlainBG_Dye);

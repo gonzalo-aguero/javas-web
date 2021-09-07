@@ -7,7 +7,7 @@ export default class SiteConfig{
         // #### VISTA DE INICIO ###
         this.Views.Inicio = {};
         this.Views.Inicio.Name = "Inicio";
-        this.Views.Inicio.Title = "GMA Desarrollo web";
+        this.Views.Inicio.Title = "Javas Web";
         this.Views.Inicio.UrlHash = "#";
         this.Views.Inicio.Url = `${this.Domain}/${this.Views.Inicio.UrlHash}`;
 
