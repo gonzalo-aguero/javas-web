@@ -1,0 +1,22 @@
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+:root{
+    --color1: #FFFFFF;
+    --color2: #E8E8E8;
+    --color3: #FFBE47;
+    --color4: #FEA501;
+    --color5: #090909;
+    --font1: "Rajdhani";
+    --font2: "Roboto Condensed";
+}
+*{
+    list-style: none;
+}
+html,body{
+    margin:0;
+}
+
+@import "header";
