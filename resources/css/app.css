@@ -8,7 +8,8 @@
     --color2: #E8E8E8;
     --color3: #FFBE47;
     --color4: #FEA501;
-    --color5: #090909;
+    --color5: #3D3D3D;
+    --color6: #090909;
     --font1: "Rajdhani";
     --font2: "Roboto Condensed";
 }
@@ -20,3 +21,5 @@ html,body{
 }
 
 @import "header";
+@import "coverPage";
+@import "aboutUs";

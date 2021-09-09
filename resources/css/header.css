@@ -1,5 +1,5 @@
 #header{
-  background-color: var(--color5);
+  background-color: var(--color6);
   color: var(--color2);
   display: flex;
   justify-content: space-evenly;
@@ -9,6 +9,8 @@
   -webkit-box-shadow: 0px 1px 15px 1px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 1px 15px 1px rgba(0,0,0,0.75);
   box-shadow: 0px 1px 15px 1px rgba(0,0,0,0.75);
+  position: relative;
+  z-index: 1;
 }
 
 #header > .left,

@@ -1,0 +1,45 @@
+#aboutUs{
+  background-color: var(--color1);
+  position: relative;
+  z-index: 1;
+  background-color: #a28989;
+}
+#aboutUs > .image{
+    display: none;
+  height: 26em;
+  --rotate: 45deg;
+  -webkit-transform: rotate(var(--rotate));
+  -moz-transform: rotate(var(--rotate));
+  -ms-transform: rotate(var(--rotate));
+  -o-transform: rotate(var(--rotate));
+  transform: rotate(var(--rotate));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#aboutUs > .image::before{
+  content: "";
+  background-color: rgb(41 33 59 / .65);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#aboutUs > .decorationBlock{
+
+}
+#aboutUs > .text{
+  font-size: 1em;
+}
+
+#aboutUs > .text > h1{
+  font-family: var(--font1);
+  font-weight: bold;
+  color: var(--color4)
+}
+
+#aboutUs > .text > p{
+  font-family: var(--font2);
+  font-weight: normal;
+  color: var(--color5);
+  text-align: right;
+}
