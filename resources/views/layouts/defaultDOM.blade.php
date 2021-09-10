@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <meta name="keywords" content="desarrollo web,web,www,diseño web,diseño,agencia desarrollo web,web developer,software,desarrollo de software"/>
+    <meta name="description" content="Somos JavasWeb, una consultora especializada en el desarrollo web. 
+        Buscamos ofrecer a nuestros clientes el mejor servicio, pensando siempre en la mejor calidad a cambio del mejor precio."/>
+    <meta name="author" content="gonzaloaguerodev@gmail.com" />
 
-    <meta name="keywords" content="como tener una pagina,como hacer una pagina,empresas,negocio,empresa,servicio,web,pagina,sitio web,desarrollo web, gmadesarrolloweb.ml, gmadesarrolloweb,GMA,gma,ecommerce,commerce,e-commerce,tienda,tienda online,comercio electronico,gma desarrolloweb,gma desarrollo web,parana,argentina,entre rios,Desarrollo web argentina,Desarrollo web parana,paraná"/>
-    <meta name="description" content="Le brindamos a tu empresa la posibilidad de estar presente en internet y poder vender por este poderoso medio. || ¡Consigue tu página web! || ¡Obtén tu tienda online! || ¡Obtén tu e-commerce!"/>
-    <meta name="author" content="gonzaloaguerodev@javasweb" />
     <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}" />
-
-
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
@@ -26,10 +25,10 @@
         </div>
         <nav class="right" id="mainNavigation">
             <ul>
-                <li><a href="{{null}}">Menu 1<a></li>
-                <li><a href="{{null}}">Menu 1<a></li>
-                <li><a href="{{null}}">Menu 1<a></li>
-                <li><a href="{{null}}">Menu 1<a></li>
+                <li><a href="{{null}}">Nosotros<a></li>
+                <li><a href="{{null}}">Servicios<a></li>
+                <li><a href="{{null}}">Por qué elegirnos<a></li>
+                <li><a href="{{null}}">Contacto<a></li>
             </ul>
         </nav>
     </header>
