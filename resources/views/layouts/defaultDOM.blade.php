@@ -26,10 +26,10 @@
         </div>
         <nav class="right" id="mainNavigation">
             <ul>
-                <li><a href="{{null}}">Menu 1<a></li>
-                <li><a href="{{null}}">Menu 1<a></li>
-                <li><a href="{{null}}">Menu 1<a></li>
-                <li><a href="{{null}}">Menu 1<a></li>
+                <li><a href="{{null}}">sa<a></li>
+                <li><a href="{{null}}">Servicios<a></li>
+                <li><a href="{{null}}">Por qué elegirnos<a></li>
+                <li><a href="{{null}}">Contacto<a></li>
             </ul>
         </nav>
     </header>
