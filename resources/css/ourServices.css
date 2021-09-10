@@ -1,0 +1,62 @@
+#ourServices{
+  background-color: white;
+  font-size: 16px;
+  height: 31.25em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+}
+#ourServices > h2{
+  color: var(--color4);
+  font-family: var(--font1);
+  margin-top:0;
+  font-size: 2.75em;
+}
+#ourServices > .services{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+}
+#ourServices .service{
+  display: flex;
+  flex-flow: column;
+  width: 15em;
+  align-items: center;
+  justify-content:  flex-start;
+  text-align: center;
+}
+#ourServices .service > img{
+  height: 4.5em;
+  margin-bottom: 1em;
+}
+#ourServices .service > h3{
+  color: var(--color4);
+  font-family: var(--font2);
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#ourServices .service > p{
+  color: var(--color5);
+  font-family: var(--font2);
+  font-weight: normal;
+  font-size: .9em;
+  margin:0;
+  width: 70%;
+}
+#ourServices .decorationBlock{
+  position: absolute;
+}
+#ourServices .decorationBlock.i0{
+  left:0;
+  bottom:0;
+}
+#ourServices .decorationBlock.i1{
+  right:0;
+  top:0;
+}
