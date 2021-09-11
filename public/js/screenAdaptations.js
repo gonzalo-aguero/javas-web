@@ -55,5 +55,25 @@ function whyChooseUsSVG(){
     svg2.setAttribute('height', svg2Size);
     polygon2.setAttribute('points', `${svg2Size},0 ${svg2Size},${svg2Size} 0,${svg2Size}`);
 }
+/**
+ * Resize the SVG triangle in the footer according to the width of the screen.
+ */
+function footerSVG(){
+    const svg = document.querySelector("#footer svg.i0");//Black triangle
+    const polygon1 = svg.querySelector("polygon");
+    const width = window.screen.width;
+    let svgWidth;
+
+    if(width > 550){
+        svgWidth = 650;
+    }else{
+        svgWidth = 200;
+    }
+
+    svg.setAttribute('width', svgWidth);
+    svg.setAttribute('height', '500');
+    polygon1.setAttribute('points', `${svgWidth},0 ${svgWidth},500 0,500`);
+}
 ourServicesSVG();
 whyChooseUsSVG();
+footerSVG();

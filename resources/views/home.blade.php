@@ -21,10 +21,7 @@
         </div>
     </section>
     <section id="aboutUs">
-        <div class="image" style="background-image: url({{asset('img/design/aboutUs.jpg')}})"></div>
-        <svg width="600" height="300" class="decorationBlock i1">
-            <polygon points="0,0 600,0 300,300" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
-        </svg>
+        <img src="{{asset('img/design/aboutUs.jpg')}}">
         <div class="text">
             <h1>INFORMACIÓN SOBRE LA EMPRESA</h1>
             <p>
@@ -33,6 +30,18 @@
                 en la mejor calidad a cambio del mejor precio.
             </p>
         </div>
+        <!-- Yellow Triangle -->
+        <svg width="600" height="300" class="i0">
+            <polygon points="0,0 600,0 300,300" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
+        </svg>
+        <!-- White Polygon -->
+        <svg width="900" height="500" class="i1">
+            <polygon points="300,0 900,0 900,500 200,500 0,300" stroke="none" stroke-width="0" fill="var(--color1)" class=""></polygon>
+        </svg>
+        <!-- White Triangle -->
+        <svg width="250" height="250" class="i2">
+            <polygon points="0,0 250,250 0,250" stroke="none" stroke-width="0" fill="var(--color1)"></polygon>
+        </svg>
     </section>
     <section id="ourServices">
         <!-- Black triangle -->
