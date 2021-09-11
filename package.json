@@ -1,6 +1,7 @@
 {
     "private": true,
     "scripts": {
+        "compile": "npm run development",
         "dev": "npm run development",
         "development": "mix",
         "watch": "mix watch",
@@ -16,6 +17,7 @@
         "postcss": "^8.1.14"
     },
     "dependencies": {
+        "animate.css": "^4.1.1",
         "gulp": "^4.0.2",
         "tailwindcss": "^2.2.11"
     }

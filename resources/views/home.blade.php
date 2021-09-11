@@ -62,4 +62,29 @@
             </div>
         </div>
     </section>
+    <section id="whyChooseUs">
+        <div class="text">
+            <h2>¿POR QUÉ ELEGIRNOS?</h2>
+            <h3>Portal Tech S. A dona computadoras</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error perferendis aperiam
+                 nisi culpa, sapiente esse obcaecati debitis itaque quibusdam earum quia incidunt non qui!</p>
+
+            <h3>Portal Tech S. A dona computadoras</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error perferendis aperiam
+            nisi culpa, sapiente esse obcaecati debitis itaque quibusdam earum quia incidunt non qui!</p>
+
+            <h3>Portal Tech S. A dona computadoras</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error perferendis aperiam
+            nisi culpa, sapiente esse obcaecati debitis itaque quibusdam earum quia incidunt non qui!</p>
+        </div>
+        <img src="{{asset('img/design/whyChooseUs.jpg')}}">
+        <!-- Yellow polygon -->
+        <svg width="500" height="500" class="i0">
+            <polygon points="0,0 100,0 500,350 350,500 0,500" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
+        </svg>
+        <!-- White triangle -->
+        <svg width="300" height="300" class="i1">
+            <polygon points="300,0 300,300 0,300" stroke="none" stroke-width="0" fill="var(--color1)"></polygon>
+        </svg>
+    </section>
 @endsection

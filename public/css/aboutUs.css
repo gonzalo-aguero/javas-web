@@ -1,0 +1,124 @@
+#aboutUs{
+  font-size: 16px;
+  background-color: var(--color1);
+  position: relative;
+  z-index: -1;
+  height: 31.25em;
+  box-sizing: border-box;
+}
+
+#aboutUs > .image{
+  position: absolute;
+  width: 18em;
+  height: 200%;
+  left: 5em;
+  top: -45%;
+  --rotate: -45deg;
+  transform: rotate(var(--rotate));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#aboutUs > .image::before{
+  content: "";
+  background-color: rgb(41 33 59 / 0.65);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#aboutUs > .decorationBlock{
+  position: absolute;
+  left: 9.54em;
+  top:0;
+}
+
+#aboutUs > .text{
+  font-size: 1em;
+  position: absolute;
+  right:0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  padding: 8em 4em;
+}
+
+#aboutUs > .text > h1{
+  font-family: var(--font1);
+  font-weight: bold;
+  color: var(--color4);
+  text-align: right;
+  font-size: 1.8em;
+}
+
+#aboutUs > .text > p{
+  font-family: var(--font2);
+  font-weight: normal;
+  color: var(--color5);
+  text-align: right;
+}
+
+@media screen and (max-width: 1100px){
+  #aboutUs > .text{
+    font-size: 1em;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 900px){
+  #aboutUs > .text{
+    width: 60%;
+    padding: 8em 4em;
+    padding-right: 2em;
+  }
+  #aboutUs{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 750px){
+  #aboutUs > .image{
+    width: 11em;
+    left: 2em;
+  }
+  /* New size: 300*150 */
+  #aboutUs > .decorationBlock{
+    left: -1.9em;
+  }
+}
+@media screen and (max-width: 600px){
+  #aboutUs{
+    font-size: 10px;
+  }
+  #aboutUs > .image{
+    width: 11em;
+    left: 2em;
+  }
+  /* New size: 200*100 */
+  #aboutUs > .decorationBlock{
+    left: -1.9em;
+  }
+  #aboutUs > .text{
+    font-size: 1.1em;
+    padding: 7em 4em;
+    padding-right: 2em;
+  }
+}
+@media screen and (max-width: 450px){
+  #aboutUs > .image{
+    display:none;
+  }
+  /* New size: 200*100 */
+  #aboutUs > .decorationBlock{
+    display:none;
+  }
+  #aboutUs > .text{
+    position: relative;
+    font-size: 1.1em;
+    padding: 7em 4em;
+    width:100%;
+  }
+  #aboutUs > .text > h1,
+  #aboutUs > .text > p{
+    text-align: center;
+  }
+}

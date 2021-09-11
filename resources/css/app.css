@@ -15,6 +15,9 @@
 }
 *{
     list-style: none;
+    behavior: smooth;
+    -ms-behavior: smooth;
+    scroll-behavior: smooth;
 }
 html,body{
     margin:0;
@@ -24,3 +27,5 @@ html,body{
 @import "coverPage";
 @import "aboutUs";
 @import "ourServices";
+@import "whyChooseUs";
+@import "footer";
