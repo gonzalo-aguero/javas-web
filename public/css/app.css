@@ -28,3 +28,9 @@ html,body{
     margin:0;
     overflow-x: hidden;
 }
+.imageButton{
+    padding:0;
+    background: none;
+    border: none;
+}
+

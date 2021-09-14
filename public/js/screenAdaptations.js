@@ -1,5 +1,49 @@
 "use strict";
 /**
+ * Resize the SVG triangles and polygon in the "About Us" section according to the width of the screen.
+ */
+function aboutUsSVG(){
+    const svg1 = document.querySelector("#aboutUs svg.i0");//Yellow Triangle.
+    const svg2 = document.querySelector("#aboutUs svg.i1");//White Polygon.
+    const svg3 = document.querySelector("#aboutUs svg.i2");//White Triangle.
+    const polygon1 = svg1.querySelector("polygon");//Yellow Triangle.
+    const polygon2 = svg2.querySelector("polygon");//White Polygon.
+    const polygon3 = svg3.querySelector("polygon");//White Triangle.
+    const width = window.screen.width;
+
+    if(width > 790){
+        //Yellow Triangle.
+        svg1.setAttribute('width', 600);
+        svg1.setAttribute('height', 300);
+        polygon1.setAttribute('points', '0,0 600,0 300,300');
+
+        //White Polygon.
+        svg2.setAttribute('width', 900);
+        svg2.setAttribute('height', 500);
+        polygon2.setAttribute('points', '300,0 900,0 900,500 200,500 0,300');
+
+        //White Triangle.
+        svg3.setAttribute('width', 250);
+        svg3.setAttribute('height', 250);
+        polygon3.setAttribute('points', '0,0 250,250 0,250');
+    }else{
+        //Yellow Triangle.
+        svg1.setAttribute('width', 250);
+        svg1.setAttribute('height', 250);
+        polygon1.setAttribute('points', '50,0 250,0 150,250');
+
+        //White Polygon.
+        svg2.setAttribute('width', 400);
+        svg2.setAttribute('height', 500);
+        polygon2.setAttribute('points', '100,0 400,0 400,500 100,500 0,250');
+
+        //White Triangle.
+        svg3.setAttribute('width', 200);
+        svg3.setAttribute('height', 250);
+        polygon3.setAttribute('points', '0,0 100,250 0,250');
+    }
+}
+/**
  * Resize the SVG triangles in the "Our services" section according to the width of the screen.
  */
 function ourServicesSVG(){
@@ -74,6 +118,7 @@ function footerSVG(){
     svg.setAttribute('height', '500');
     polygon1.setAttribute('points', `${svgWidth},0 ${svgWidth},500 0,500`);
 }
+aboutUsSVG();
 ourServicesSVG();
 whyChooseUsSVG();
 footerSVG();

@@ -1,6 +1,11 @@
 @extends('layouts.defaultDOM')
-@section('title', $service)
+@section('title', $service->name)
 @section('content')
-    <h1>{{$service}}</h1>
-    <h2>It's a great service!</h2>
+    <br>
+    <a href="{{route('services.index')}}">Return</a>
+    ---
+    <a href="{{route('services.editForm', $service)}}">Edit service</a>
+    <h1>{{$service->name}} (#{{$service->id}})</h1>
+    <h2>{{$service->price}}</h2>
+    <p>Description: {{$service->description}}</p>
 @endsection

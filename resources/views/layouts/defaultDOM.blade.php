@@ -25,12 +25,17 @@
             </div>
         </div>
         <nav class="right" id="mainNavigation">
-            <img src="{{asset('img/icons/menu_white_24dp.svg')}}" id="openMenu" alt="Menu">
-            <ul>
-                <li><a href="#aboutUs">Nosotros<a></li>
-                <li><a href="#ourServices">Servicios<a></li>
-                <li><a href="#whyChooseUs">Por qué elegirnos<a></li>
-                <li><a href="#footer">Contacto<a></li>
+            <button class="imageButton">
+                <img src="{{asset('img/icons/menu_white_24dp.svg')}}" id="openMenu" alt="Menu">
+            </button>
+            <button class="imageButton">
+                <img src="{{asset('img/icons/close_white_24dp.svg')}}" id="closeMenu" alt="Menu" style="display:none;">
+            </button>
+            <ul class="animate__animated">
+                <li><a href="#_aboutUs">Nosotros<a></li>
+                <li><a href="#_ourServices">Servicios<a></li>
+                <li><a href="#_whyChooseUs">Por qué elegirnos<a></li>
+                <li><a href="#_footer">Contacto<a></li>
             </ul>
         </nav>
     </header>
@@ -54,5 +59,6 @@
         </div>
     </footer>
     <script src="{{asset('js/screenAdaptations.js')}}"></script>
+    <script src="{{asset('js/menu.js')}}"></script>
 </body>
 </html>
