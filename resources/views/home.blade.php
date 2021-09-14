@@ -55,36 +55,33 @@
         <h2 class="animate__animated animate__fadeIn">NUESTROS SERVICIOS</h2>
         <div class="services">
             <div class="service i0 animate__animated">
-                <img src="{{asset('img/icons/ourServicesIcon1.png')}}" alt="">
-                <h3>CONSULTORÍA INFORMÁTICA</h3>
-                <p>Te ayudamos a maximizar tu red y procesos informáticos.</p>
+                <img src="{{asset('img/icons/ourServicesIcon1.svg')}}" alt="">
+                <h3>CONSULTORÍA WEB</h3>
+                <p>Creamos una solución para vos a través de la web.</p>
             </div>
             <div class="service i1 animate__animated">
                 <img src="{{asset('img/icons/ourServicesIcon2.png')}}" alt="">
-                <h3>SOLUCIONES EN LA NUBE</h3>
-                <p>Conservá los datos de tus negocios y aplicaciones de manera segura.</p>
+                <h3>MANTENIMIENTO</h3>
+                <p>Nos encargamos de mantener vivo tu sitio web y hacer los cambios que necesites.</p>
             </div>
             <div class="service i2 animate__animated">
-                <img src="{{asset('img/icons/ourServicesIcon3.png')}}" alt="">
-                <h3>CONTINUIDAD EMPRESARIAL</h3>
-                <p>¡Volvé a recuperar tus datos cuando ocurra un desastre!</p>
+                <img src="{{asset('img/icons/ourServicesIcon3.svg')}}" alt="">
+                <h3>DERIVACIÓN DE CLIENTES</h3>
+                <p>¡Si sos desarrollador/a, en caso de no poder tomar un cliente te lo derivamos!</p>
             </div>
         </div>
     </section>
     <section id="whyChooseUs">
         <div class="text">
-            <h2 class="animate__animated animate__fadeInLeftBig">¿POR QUÉ ELEGIRNOS?</h2>
-            <h3>Portal Tech S. A dona computadoras</h3>
-            <p class="animate__animated animate__fadeInRight animate__delay-1s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error perferendis aperiam
-                 nisi culpa, sapiente esse obcaecati debitis itaque quibusdam earum quia incidunt non qui!</p>
+            <h2 class="animate__animated">¿POR QUÉ ELEGIRNOS?</h2>
+            <h3>Efectividad</h3>
+            <p class="animate__animated">Solucionamos los problemas de cada cliente, siempre con la mejor calidad y el mejor precio.</p>
 
-            <h3>Portal Tech S. A dona computadoras</h3>
-            <p class="animate__animated animate__fadeInLeft animate__delay-2s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error perferendis aperiam
-            nisi culpa, sapiente esse obcaecati debitis itaque quibusdam earum quia incidunt non qui!</p>
+            <h3>Caracteristica</h3>
+            <p class="animate__animated">Otra caracteristica hermosa que el fer tiene que poner porque el desarrollador no tiene creatividad.</p>
 
-            <h3>Portal Tech S. A dona computadoras</h3>
-            <p class="animate__animated animate__fadeInRight animate__delay-3s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error perferendis aperiam
-            nisi culpa, sapiente esse obcaecati debitis itaque quibusdam earum quia incidunt non qui!</p>
+            <h3>Presupuesto sin cargo</h3>
+            <p class="animate__animated">Contanos lo que necesitas o cuál es tu problema; ¡Nosotros te ofrecemos una solución y te pasamos presupuesto sin cargo!</p>
         </div>
         <img src="{{asset('img/design/whyChooseUs.jpg')}}">
         <!-- Yellow polygon -->

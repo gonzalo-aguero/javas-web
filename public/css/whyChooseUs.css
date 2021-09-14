@@ -16,6 +16,7 @@
   padding-right: 3em;
 }
 #whyChooseUs > .text > h2{
+  opacity: 0;
   color: var(--color5);
   font-family: var(--font1);
   font-weight: bold;
@@ -28,6 +29,7 @@
   text-transform: uppercase;
 }
 #whyChooseUs > .text > p{
+  opacity: 0;
   font-size: .8em;
   color: var(--color1);
   font-family: var(--font2);

@@ -29,6 +29,7 @@ footer > .text{
   box-sizing: border-box;
 }
 footer > .text h2{
+  opacity: 0;
   color: var(--color4);
   font-size: 2.7em;
   text-align: right;
@@ -49,6 +50,7 @@ footer > .text a{
   color: var(--color1);
 }
 footer > .text p{
+  opacity: 0;
   color: var(--color2);
   font-size: 1em;
   text-align: right;
