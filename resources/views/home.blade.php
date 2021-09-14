@@ -15,16 +15,16 @@
         <svg width="500" height="500" class="decorationBlock i1">
             <polygon points="500,0 500,500 0,500" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
         </svg>
-        <div class="text">
+        <div class="text animate__animated animate__fadeInLeftBig">
             <h1>JAVAS<br>WEB</h1>
-            <p>Consultora de desarrollo web</p>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">Consultora de desarrollo web</p>
         </div>
     </section>
     <section id="aboutUs">
         <img src="{{asset('img/design/aboutUs.jpg')}}">
         <div class="text">
-            <h1>INFORMACIÓN SOBRE LA EMPRESA</h1>
-            <p>
+            <h1 class="animate__animated animate__fadeInLeft">INFORMACIÓN SOBRE LA EMPRESA</h1>
+            <p class="animate__animated animate__fadeInRight">
                 Somos JavasWeb, una consultora especializada en el desarrollo web.
                 Buscamos ofrecer a nuestros clientes el mejor servicio, pensando siempre
                 en la mejor calidad a cambio del mejor precio.
@@ -52,19 +52,19 @@
         <svg width="300" height="300" class="decorationBlock i1">
             <polygon points="0,0 300,300 300,0" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
         </svg>
-        <h2>NUESTROS SERVICIOS</h2>
+        <h2 class="animate__animated animate__fadeIn">NUESTROS SERVICIOS</h2>
         <div class="services">
-            <div class="service i0">
+            <div class="service i0 animate__animated">
                 <img src="{{asset('img/icons/ourServicesIcon1.png')}}" alt="">
                 <h3>CONSULTORÍA INFORMÁTICA</h3>
                 <p>Te ayudamos a maximizar tu red y procesos informáticos.</p>
             </div>
-            <div class="service i1">
+            <div class="service i1 animate__animated">
                 <img src="{{asset('img/icons/ourServicesIcon2.png')}}" alt="">
                 <h3>SOLUCIONES EN LA NUBE</h3>
                 <p>Conservá los datos de tus negocios y aplicaciones de manera segura.</p>
             </div>
-            <div class="service i2">
+            <div class="service i2 animate__animated">
                 <img src="{{asset('img/icons/ourServicesIcon3.png')}}" alt="">
                 <h3>CONTINUIDAD EMPRESARIAL</h3>
                 <p>¡Volvé a recuperar tus datos cuando ocurra un desastre!</p>
@@ -73,17 +73,17 @@
     </section>
     <section id="whyChooseUs">
         <div class="text">
-            <h2>¿POR QUÉ ELEGIRNOS?</h2>
+            <h2 class="animate__animated animate__fadeInLeftBig">¿POR QUÉ ELEGIRNOS?</h2>
             <h3>Portal Tech S. A dona computadoras</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error perferendis aperiam
+            <p class="animate__animated animate__fadeInRight animate__delay-1s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error perferendis aperiam
                  nisi culpa, sapiente esse obcaecati debitis itaque quibusdam earum quia incidunt non qui!</p>
 
             <h3>Portal Tech S. A dona computadoras</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error perferendis aperiam
+            <p class="animate__animated animate__fadeInLeft animate__delay-2s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error perferendis aperiam
             nisi culpa, sapiente esse obcaecati debitis itaque quibusdam earum quia incidunt non qui!</p>
 
             <h3>Portal Tech S. A dona computadoras</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error perferendis aperiam
+            <p class="animate__animated animate__fadeInRight animate__delay-3s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error perferendis aperiam
             nisi culpa, sapiente esse obcaecati debitis itaque quibusdam earum quia incidunt non qui!</p>
         </div>
         <img src="{{asset('img/design/whyChooseUs.jpg')}}">

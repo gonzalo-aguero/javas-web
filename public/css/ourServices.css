@@ -14,6 +14,7 @@
   z-index: 1;
 }
 #ourServices > h2{
+  display: none;
   color: var(--color4);
   font-family: var(--font1);
   margin-top:0;
@@ -26,6 +27,7 @@
   z-index:1;
 }
 #ourServices .service{
+  opacity: 0;
   display: flex;
   flex-flow: column;
   width: 15em;

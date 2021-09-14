@@ -36,6 +36,7 @@
 }
 
 #aboutUs > .text > h1{
+  display: none;
   font-family: var(--font1);
   font-weight: bold;
   color: var(--color4);
@@ -45,6 +46,7 @@
 }
 
 #aboutUs > .text > p{
+  display: none;
   font-family: var(--font2);
   font-weight: normal;
   color: var(--color5);

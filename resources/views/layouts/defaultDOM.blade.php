@@ -17,7 +17,7 @@
 </head>
 <body>
     <header id="header">
-        <div class="left" id="siteIdentity">
+        <div class="left animate__animated animate__fadeIn animate__slow" id="siteIdentity">
             <img src="{{asset('img/favicon.png')}}" alt="Logo JavasWeb">
             <div>
                 <h2 class="i0">JAVAS</h2>
@@ -31,7 +31,7 @@
             <button class="imageButton">
                 <img src="{{asset('img/icons/close_white_24dp.svg')}}" id="closeMenu" alt="Menu" style="display:none;">
             </button>
-            <ul class="animate__animated">
+            <ul class="animate__animated animate__fadeInDown animate__delay-2s">
                 <li><a href="#_aboutUs">Nosotros<a></li>
                 <li><a href="#_ourServices">Servicios<a></li>
                 <li><a href="#_whyChooseUs">Por qué elegirnos<a></li>
@@ -49,16 +49,17 @@
             <polygon points="650,0 650,500 0,500" stroke="none" stroke-width="0" fill="var(--color6)"></polygon>
         </svg>
         <div class="text">
-            <h2>Ponete en contacto</h2>
+            <h2 class="animate__animated animate__fadeIn animate__slow">Ponete en contacto</h2>
             <h3>Dirección postal</h3>
-            <p>Paraná, Entre Ríos, Argentina</p>
+            <p class="animate__animated animate__fadeIn animate__slow animate__delay-1s">Paraná, Entre Ríos, Argentina</p>
             <h3>Correo electrónico</h3>
-            <p><a href="mailto:gonzaloaguerodev@gmail.com">gonzaloaguerodev@gmail.com</a></p>
+            <p class="animate__animated animate__fadeIn animate__slow animate__delay-2s"><a href="mailto:gonzaloaguerodev@gmail.com">gonzaloaguerodev@gmail.com</a></p>
             <h3>Número de teléfono</h3>
-            <p>+54 9 343 425-8605</p>
+            <p class="animate__animated animate__fadeIn animate__slow animate__delay-3s">+54 9 343 425-8605</p>
         </div>
     </footer>
     <script src="{{asset('js/screenAdaptations.js')}}"></script>
+    <script src="{{asset('js/animationsHandler.js')}}"></script>
     <script src="{{asset('js/menu.js')}}"></script>
 </body>
 </html>
