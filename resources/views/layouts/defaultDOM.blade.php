@@ -36,6 +36,7 @@
                 <li><a href="#_ourServices">Servicios<a></li>
                 <li><a href="#_whyChooseUs">Por qué elegirnos<a></li>
                 <li><a href="#_footer">Contacto<a></li>
+                <li><a href="devs">Desarrollador<a></li>
             </ul>
         </nav>
     </header>

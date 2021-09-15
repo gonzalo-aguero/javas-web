@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\DevsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,12 +15,14 @@ use App\Http\Controllers\ServicesController;
 |
 */
 Route::get('/', HomeController::class)->name('home');
+Route::get('devs', DevsController::class);
 Route::get('services', [ServicesController::class, 'index'])->name('services.index');
 Route::get('services/create', [ServicesController::class, 'createForm'])->name('services.createForm');
 Route::get('services/{service}', [ServicesController::class, 'show'])->name('services.show');
 Route::post('services/create', [ServicesController::class, 'create'])->name('services.create');
 Route::get('services/{service}/edit', [ServicesController::class, 'editForm'])->name('services.editForm');
 Route::put('services/{service}/edit', [ServicesController::class, 'edit'])->name('services.edit');
+
 
 
 
