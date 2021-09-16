@@ -1,4 +1,5 @@
 @section('title', 'JAVAS WEB')
+@section('isHomePage', true)
 @extends('layouts.defaultDOM')
 @section('content')
     <section id="coverPage">

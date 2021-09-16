@@ -80,7 +80,6 @@
   display: flex;
   justify-content: space-evenly;
   padding: 0;
-  width: 70%;
   --animate-delay: 0ms;
   --animate-duration: 300ms;
 }
@@ -125,8 +124,8 @@
     display: block;
   }
 }
-@media screen and (max-width: 500px){
- #header{
+@media screen and (max-width: 890px){
+  #header{
     padding-left: 2em;
     padding-right: 2em;
   }

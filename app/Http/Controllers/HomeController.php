@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function __invoke(){
-        return view('home');
+        $styleSheets = [
+        ];
+        $scripts = [
+            asset('js/index.js')
+        ];
+        $isHomePage = true;
+        $params = compact('styleSheets', 'scripts', 'isHomePage');
+        return view('home', $params);
     }
 }

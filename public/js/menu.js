@@ -8,7 +8,11 @@ const coverPage = document.getElementById("coverPage");
 var hash = window.location.hash;
 
 //Margin for the coverPage equal to header height since the header has position:fixed.
-coverPage.style.marginTop = header.offsetHeight + "px";
+if(isDevsPage){
+    document.querySelector("section.i0").style.marginTop = header.offsetHeight + "px";
+}else if(isHomePage){
+    coverPage.style.marginTop = header.offsetHeight + "px";
+}
 //Only when the mobile menu is applied.
 if(mobileMenu){
     mainMenu.style.display = "none";
@@ -34,6 +38,7 @@ logoAndTitle.forEach( element => element.addEventListener("click", ()=>{
     setTimeout(()=> location.hash = "_", 1000);
 }));
 
+scrollToSection();
 /**
  * Open or close the main menu (only for mobile menu).
  */

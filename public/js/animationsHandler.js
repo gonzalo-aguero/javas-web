@@ -1,23 +1,47 @@
 "use strict";
-var aboutUsAnimated = false;
-const aboutUs = document.getElementById("aboutUs");
-const aboutUsTitle = document.querySelector("#aboutUs .text > h1");
-const aboutUsText = document.querySelector("#aboutUs .text > p");
+var aboutUsAnimated;
+var aboutUs;
+var aboutUsTitle;
+var aboutUsText;
+var ourServicesAnimated;
+var ourServices;
+var ourServicesTitle;
+var ourServicesItems;
+var whyChooseUsAnimated;
+var whyChooseUs;
+var whyChooseUsTitle;
+var whyChooseUsItems;
+var footerAnimated;
+var footer;
+var footerTitle;
+var footerItems;
+var homeEvents = true;//Home page scroll events are working.
+var devsEvents = true;//Devs page scroll events are working.
+const warnMsg = "This exception can be thrown simply by not being on the home page. In this case ignore it.\n";
 
-var ourServicesAnimated = false;
-const ourServices = document.getElementById("ourServices");
-const ourServicesTitle = document.querySelector("#ourServices > h2");
-const ourServicesItems = document.querySelectorAll("#ourServices .service");
+try {
+    aboutUsAnimated = false;
+    aboutUs = document.getElementById("aboutUs");
+    aboutUsTitle = document.querySelector("#aboutUs .text > h1");
+    aboutUsText = document.querySelector("#aboutUs .text > p");
 
-var whyChooseUsAnimated = false;
-const whyChooseUs = document.getElementById("whyChooseUs");
-const whyChooseUsTitle = document.querySelector("#whyChooseUs .text > h2");
-const whyChooseUsItems = document.querySelectorAll("#whyChooseUs .text > p");
+    ourServicesAnimated = false;
+    ourServices = document.getElementById("ourServices");
+    ourServicesTitle = document.querySelector("#ourServices > h2");
+    ourServicesItems = document.querySelectorAll("#ourServices .service");
 
-var footerAnimated = false;
-const footer = document.getElementById("footer");
-const footerTitle = document.querySelector("#footer .text h2");
-const footerItems = document.querySelectorAll("#footer .text p");
+    whyChooseUsAnimated = false;
+    whyChooseUs = document.getElementById("whyChooseUs");
+    whyChooseUsTitle = document.querySelector("#whyChooseUs .text > h2");
+    whyChooseUsItems = document.querySelectorAll("#whyChooseUs .text > p");
+
+    footerAnimated = false;
+    footer = document.getElementById("footer");
+    footerTitle = document.querySelector("#footer .text h2");
+    footerItems = document.querySelectorAll("#footer .text p");
+} catch (error) {
+    console.warn(warnMsg, error);
+}
 
 window.addEventListener("scroll", scrollEventsHandler);
 
@@ -25,16 +49,34 @@ function scrollEventsHandler() {
     const y = window.scrollY;
     const anticipation = 200;
     const footerCondition = !footerAnimated && y >= (footer.offsetTop - 350);
-
-    if( !aboutUsAnimated && y >= (aboutUs.offsetTop - anticipation)){
-        aboutUsAnimations();
-    }else if( !ourServicesAnimated && y >= (ourServices.offsetTop - anticipation)){
-        ourServicesAnimations();
-    }else if( !whyChooseUsAnimated && y >= (whyChooseUs.offsetTop - anticipation)){
-        whyChooseUsAnimations();
-    }else if(footerCondition){
-        footerAnimations();
+    if(homeEvents){
+        //Scroll events in the home page.
+        try {
+            if( !aboutUsAnimated && y >= (aboutUs.offsetTop - anticipation)){
+                aboutUsAnimations();
+            }else if( !ourServicesAnimated && y >= (ourServices.offsetTop - anticipation)){
+                ourServicesAnimations();
+            }else if( !whyChooseUsAnimated && y >= (whyChooseUs.offsetTop - anticipation)){
+                whyChooseUsAnimations();
+            }else if(footerCondition){
+                footerAnimations();
+            }
+        } catch (error) {
+            homeEvents = false;
+            console.warn(warnMsg, error);
+        }
+    }else if(devsEvents){
+        //Scroll events in the devs page.
+        try {
+            if(footerCondition){
+                footerAnimations();
+            }
+        } catch (error) {
+            devsEvents = false;
+            console.warn("This exception can be thrown simply by not being on the devs page. In this case ignore it.\n", error);
+        }
     }
+
 }
 function aboutUsAnimations(){
     aboutUsTitle.style.display = "block";

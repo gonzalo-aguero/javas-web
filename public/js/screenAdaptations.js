@@ -118,7 +118,12 @@ function footerSVG(){
     svg.setAttribute('height', '500');
     polygon1.setAttribute('points', `${svgWidth},0 ${svgWidth},500 0,500`);
 }
-aboutUsSVG();
-ourServicesSVG();
-whyChooseUsSVG();
-footerSVG();
+try {
+    aboutUsSVG();
+    ourServicesSVG();
+    whyChooseUsSVG();
+    footerSVG();
+} catch (error) {
+    console.warn("This exception can be thrown simply by not being on the home page. In this case ignore it.\n", error);
+}
+

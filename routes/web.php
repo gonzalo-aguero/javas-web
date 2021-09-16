@@ -15,7 +15,9 @@ use App\Http\Controllers\DevsController;
 |
 */
 Route::get('/', HomeController::class)->name('home');
-Route::get('devs', DevsController::class);
+Route::get('devs', DevsController::class)->name('devs');
+
+// Laravel practices
 Route::get('services', [ServicesController::class, 'index'])->name('services.index');
 Route::get('services/create', [ServicesController::class, 'createForm'])->name('services.createForm');
 Route::get('services/{service}', [ServicesController::class, 'show'])->name('services.show');

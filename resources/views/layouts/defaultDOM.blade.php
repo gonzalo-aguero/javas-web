@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,7 +14,11 @@
     <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}" />
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-
+    @if (isset($styleSheets))
+        @foreach ($styleSheets as $href)
+            <link rel="stylesheet" href="{{$href}}">
+        @endforeach
+    @endif
 </head>
 <body>
     <header id="header">
@@ -32,11 +37,21 @@
                 <img src="{{asset('img/icons/close_white_24dp.svg')}}" id="closeMenu" alt="Menu" style="display:none;">
             </button>
             <ul class="animate__animated animate__fadeInDown animate__delay-2s">
-                <li><a href="#_aboutUs">Nosotros<a></li>
-                <li><a href="#_ourServices">Servicios<a></li>
-                <li><a href="#_whyChooseUs">Por qué elegirnos<a></li>
-                <li><a href="#_footer">Contacto<a></li>
-                <li><a href="devs">Desarrollador<a></li>
+                @if (isset($isHomePage) && $isHomePage === true)
+                    <li><a href="#">Inicio<a></li>
+                    <li><a href="#_aboutUs">Nosotros<a></li>
+                    <li><a href="#_ourServices">Servicios<a></li>
+                    <li><a href="#_whyChooseUs">Por qué elegirnos<a></li>
+                    <li><a href="#_footer">Contacto<a></li>
+                    <li><a href="{{route('devs')}}">Desarrollador<a></li>
+                @else
+                    <li><a href="{{route('home')}}#">Inicio<a></li>
+                    <li><a href="{{route('home')}}#_aboutUs">Nosotros<a></li>
+                    <li><a href="{{route('home')}}#_ourServices">Servicios<a></li>
+                    <li><a href="{{route('home')}}#_whyChooseUs">Por qué elegirnos<a></li>
+                    <li><a href="{{route('home')}}#_footer">Contacto<a></li>
+                    <li><a href="{{route('devs')}}">Desarrollador<a></li>
+                @endif
             </ul>
         </nav>
     </header>
@@ -59,6 +74,11 @@
             <p class="animate__animated"><a href="tel:+54 9 343 425-8605">+54 9 343 425-8605</a></p>
         </div>
     </footer>
+    @if (isset($scripts))
+        @foreach ($scripts as $src)
+            <script src="{{$src}}"></script>
+        @endforeach
+    @endif
     <script src="{{asset('js/screenAdaptations.js')}}"></script>
     <script src="{{asset('js/animationsHandler.js')}}"></script>
     <script src="{{asset('js/menu.js')}}"></script>
