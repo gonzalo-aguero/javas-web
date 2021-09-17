@@ -15,7 +15,8 @@ use App\Http\Controllers\DevsController;
 |
 */
 Route::get('/', HomeController::class)->name('home');
-Route::get('devs', DevsController::class)->name('devs');
+Route::get('devs', [DevsController::class, 'index'])->name('devs');
+Route::post('devs/contact', [DevsController::class, 'contact'])->name('devs.contact');
 
 // Laravel practices
 Route::get('services', [ServicesController::class, 'index'])->name('services.index');

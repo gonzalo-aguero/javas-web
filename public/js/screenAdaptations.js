@@ -118,12 +118,44 @@ function footerSVG(){
     svg.setAttribute('height', '500');
     polygon1.setAttribute('points', `${svgWidth},0 ${svgWidth},500 0,500`);
 }
-try {
-    aboutUsSVG();
-    ourServicesSVG();
-    whyChooseUsSVG();
-    footerSVG();
-} catch (error) {
-    console.warn("This exception can be thrown simply by not being on the home page. In this case ignore it.\n", error);
-}
+function devSectionsSVG(){
+    const SVGs = document.querySelectorAll("section > svg");
+    let originalSize = 300;
+    let newSize = 250;
+    const width = window.screen.width;
+    if(width > 960){
+        newSize = 300;
+    }else if(width > 750){
+        newSize = 250;
+    }else if(width > 450){
+        newSize = 200;
+    }else{
+        newSize = 150;
+    }
 
+    SVGs.forEach( svg => {
+        svg.setAttribute('width', newSize);
+        svg.setAttribute('height', newSize);
+        const polygon = svg.querySelector("polygon");
+        let points = polygon.getAttribute('points');
+        points = points.replaceAll(originalSize, newSize);
+        polygon.setAttribute('points', points);
+    });
+}
+if(isHomePage){
+    try{
+        aboutUsSVG();
+        ourServicesSVG();
+        whyChooseUsSVG();
+        footerSVG();
+    } catch (error) {
+        console.warn("This exception can be thrown simply by not being on the home page. In this case ignore it.\n", error);
+    }
+}else if(isDevsPage){
+    try{
+        devSectionsSVG();
+        footerSVG();
+    } catch (error) {
+        console.warn("This exception can be thrown simply by not being on the devs page. In this case ignore it.\n", error);
+    }
+}

@@ -26,4 +26,36 @@
             <polygon points="300,0 300,300 0,300" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
         </svg>
     </section>
+    <section class="i2">
+        <h2>Contacto</h2>
+        <p>Para más información contactate con nosotros a través el siguiente formulario o cualquiera de los otros medios.</p>
+        <form action="{{route('devs.contact')}}" method="post" id="contactForm">
+            @method('POST')
+            @csrf
+            <input type="text" name="name" id="name" placeholder="Nombre completo" value="{{old('name')}}">
+            @error('name')
+                <small>{{$message}}</small>
+            @enderror
+            <input type="email" name="email" id="email" placeholder="Correo electrónico" value="{{old('email')}}">
+            @error('email')
+                <small>{{$message}}</small>
+            @enderror
+            <input type="tel" name="telephone" id="telephone" placeholder="Teléfono" value="{{old('telephone')}}">
+            @error('telephone')
+                <small>{{$message}}</small>
+            @enderror
+            <input type="submit" value="Enviar">
+            @if (session('info'))
+                <script>
+                    alert("{{session('info')}}");
+                </script>
+            @endif
+        </form>
+        <svg width="300" height="300" class="i0">
+            <polygon points="0,0 300,0 300,300" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
+        </svg>
+        <svg width="300" height="300" class="i1">
+            <polygon points="0,0 300,300 0,300" stroke="none" stroke-width="0" fill="var(--color6)"></polygon>
+        </svg>
+    </section>
 @endsection

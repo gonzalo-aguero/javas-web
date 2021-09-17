@@ -79,8 +79,5 @@
             <script src="{{$src}}"></script>
         @endforeach
     @endif
-    <script src="{{asset('js/screenAdaptations.js')}}"></script>
-    <script src="{{asset('js/animationsHandler.js')}}"></script>
-    <script src="{{asset('js/menu.js')}}"></script>
 </body>
 </html>
