@@ -1,4 +1,23 @@
 "use strict";
+function screenAdaptationsInit(){
+    if(isHomePage){
+        try{
+            aboutUsSVG();
+            ourServicesSVG();
+            whyChooseUsSVG();
+            footerSVG();
+        } catch (error) {
+            console.warn("This exception can be thrown simply by not being on the home page. In this case ignore it.\n", error);
+        }
+    }else if(isDevsPage){
+        try{
+            devSectionsSVG();
+            footerSVG();
+        } catch (error) {
+            console.warn("This exception can be thrown simply by not being on the devs page. In this case ignore it.\n", error);
+        }
+    }
+}
 /**
  * Resize the SVG triangles and polygon in the "About Us" section according to the width of the screen.
  */
@@ -141,21 +160,4 @@ function devSectionsSVG(){
         points = points.replaceAll(originalSize, newSize);
         polygon.setAttribute('points', points);
     });
-}
-if(isHomePage){
-    try{
-        aboutUsSVG();
-        ourServicesSVG();
-        whyChooseUsSVG();
-        footerSVG();
-    } catch (error) {
-        console.warn("This exception can be thrown simply by not being on the home page. In this case ignore it.\n", error);
-    }
-}else if(isDevsPage){
-    try{
-        devSectionsSVG();
-        footerSVG();
-    } catch (error) {
-        console.warn("This exception can be thrown simply by not being on the devs page. In this case ignore it.\n", error);
-    }
 }

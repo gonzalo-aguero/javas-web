@@ -13,10 +13,11 @@ class DevsController extends Controller
             asset('css/devs.css')
         ];
         $scripts = [
-            asset('js/index.js'),
             asset('js/screenAdaptations.js'),
             asset('js/animationsHandler.js'),
-            asset('js/menu.js')
+            asset('js/menu.js'),
+            asset('js/WhatsAppButton.js'),
+            asset('js/index.js')
         ];
         $params = compact('styleSheets', 'scripts');
         return view('devs', $params);

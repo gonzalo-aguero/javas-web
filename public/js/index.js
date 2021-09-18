@@ -1,7 +1,14 @@
 "use strict";
 var isHomePage = true;
 var isDevsPage = false;
-if(location.pathname.includes("/devs")){
-    isHomePage = false;
-    isDevsPage = true;
-}
+window.onload = ()=>{
+    if(location.pathname.includes("/devs")){
+        isHomePage = false;
+        isDevsPage = true;
+    }
+    screenAdaptationsInit();
+    animationsHandlerInit();
+    menuInit();
+    whatsAppButtonInit();
+};
+

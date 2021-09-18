@@ -15,41 +15,44 @@ var footerAnimated;
 var footer;
 var footerTitle;
 var footerItems;
-var homeEvents = true;//Home page scroll events are working.
-var devsEvents = true;//Devs page scroll events are working.
 const warnMsg = "This exception can be thrown simply by not being on the home page. In this case ignore it.\n";
 
-try {
-    aboutUsAnimated = false;
-    aboutUs = document.getElementById("aboutUs");
-    aboutUsTitle = document.querySelector("#aboutUs .text > h1");
-    aboutUsText = document.querySelector("#aboutUs .text > p");
+function animationsHandlerInit(){
+    if(isHomePage){
+        aboutUsAnimated = false;
+        aboutUs = document.getElementById("aboutUs");
+        aboutUsTitle = document.querySelector("#aboutUs .text > h1");
+        aboutUsText = document.querySelector("#aboutUs .text > p");
 
-    ourServicesAnimated = false;
-    ourServices = document.getElementById("ourServices");
-    ourServicesTitle = document.querySelector("#ourServices > h2");
-    ourServicesItems = document.querySelectorAll("#ourServices .service");
+        ourServicesAnimated = false;
+        ourServices = document.getElementById("ourServices");
+        ourServicesTitle = document.querySelector("#ourServices > h2");
+        ourServicesItems = document.querySelectorAll("#ourServices .service");
 
-    whyChooseUsAnimated = false;
-    whyChooseUs = document.getElementById("whyChooseUs");
-    whyChooseUsTitle = document.querySelector("#whyChooseUs .text > h2");
-    whyChooseUsItems = document.querySelectorAll("#whyChooseUs .text > p");
+        whyChooseUsAnimated = false;
+        whyChooseUs = document.getElementById("whyChooseUs");
+        whyChooseUsTitle = document.querySelector("#whyChooseUs .text > h2");
+        whyChooseUsItems = document.querySelectorAll("#whyChooseUs .text > p");
 
-    footerAnimated = false;
-    footer = document.getElementById("footer");
-    footerTitle = document.querySelector("#footer .text h2");
-    footerItems = document.querySelectorAll("#footer .text p");
-} catch (error) {
-    console.warn(warnMsg, error);
+        footerAnimated = false;
+        footer = document.getElementById("footer");
+        footerTitle = document.querySelector("#footer .text h2");
+        footerItems = document.querySelectorAll("#footer .text p");
+    }else if(isDevsPage){
+        footerAnimated = false;
+        footer = document.getElementById("footer");
+        footerTitle = document.querySelector("#footer .text h2");
+        footerItems = document.querySelectorAll("#footer .text p");
+    }
+
+    window.addEventListener("scroll", scrollEventsHandler);
 }
-
-window.addEventListener("scroll", scrollEventsHandler);
 
 function scrollEventsHandler() {
     const y = window.scrollY;
     const anticipation = 200;
     const footerCondition = !footerAnimated && y >= (footer.offsetTop - 350);
-    if(homeEvents){
+    if(isHomePage){
         //Scroll events in the home page.
         try {
             if( !aboutUsAnimated && y >= (aboutUs.offsetTop - anticipation)){
@@ -62,19 +65,19 @@ function scrollEventsHandler() {
                 footerAnimations();
             }
         } catch (error) {
-            homeEvents = false;
             console.warn(warnMsg, error);
         }
-    }else if(devsEvents){
+    }else if(isDevsPage){
         //Scroll events in the devs page.
         try {
             if(footerCondition){
                 footerAnimations();
             }
         } catch (error) {
-            devsEvents = false;
             console.warn("This exception can be thrown simply by not being on the devs page. In this case ignore it.\n", error);
         }
+    }else{
+        console.warn("no animations");
     }
 
 }

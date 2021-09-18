@@ -10,10 +10,11 @@ class HomeController extends Controller
         $styleSheets = [
         ];
         $scripts = [
-            asset('js/index.js'),
             asset('js/screenAdaptations.js'),
             asset('js/animationsHandler.js'),
-            asset('js/menu.js')
+            asset('js/menu.js'),
+            asset('js/WhatsAppButton.js'),
+            asset('js/index.js')
         ];
         $isHomePage = true;
         $params = compact('styleSheets', 'scripts', 'isHomePage');
