@@ -1,4 +1,3 @@
-"use strict";
 var aboutUsAnimated;
 var aboutUs;
 var aboutUsTitle;
@@ -16,9 +15,10 @@ var footer;
 var footerTitle;
 var footerItems;
 const warnMsg = "This exception can be thrown simply by not being on the home page. In this case ignore it.\n";
+const currentPage = require('./page').currentPage();
 
-function animationsHandlerInit(){
-    if(isHomePage){
+function init(){
+    if(currentPage.isHomePage){
         aboutUsAnimated = false;
         aboutUs = document.getElementById("aboutUs");
         aboutUsTitle = document.querySelector("#aboutUs .text > h1");
@@ -38,7 +38,7 @@ function animationsHandlerInit(){
         footer = document.getElementById("footer");
         footerTitle = document.querySelector("#footer .text h2");
         footerItems = document.querySelectorAll("#footer .text p");
-    }else if(isDevsPage){
+    }else if(currentPage.isDevsPage){
         footerAnimated = false;
         footer = document.getElementById("footer");
         footerTitle = document.querySelector("#footer .text h2");
@@ -52,7 +52,7 @@ function scrollEventsHandler() {
     const y = window.scrollY;
     const anticipation = 200;
     const footerCondition = !footerAnimated && y >= (footer.offsetTop - 350);
-    if(isHomePage){
+    if(currentPage.isHomePage){
         //Scroll events in the home page.
         try {
             if( !aboutUsAnimated && y >= (aboutUs.offsetTop - anticipation)){
@@ -67,7 +67,7 @@ function scrollEventsHandler() {
         } catch (error) {
             console.warn(warnMsg, error);
         }
-    }else if(isDevsPage){
+    }else if(currentPage.isDevsPage){
         //Scroll events in the devs page.
         try {
             if(footerCondition){
@@ -137,4 +137,7 @@ function footerAnimations(){
         });
     }, 500);
     footerAnimated = true;
+}
+module.exports = {
+    init
 }

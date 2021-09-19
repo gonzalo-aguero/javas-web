@@ -78,8 +78,8 @@
             <h3>Efectividad</h3>
             <p class="animate__animated">Solucionamos los problemas de cada cliente, siempre con la mejor calidad y el mejor precio.</p>
 
-            <h3>Caracteristica</h3>
-            <p class="animate__animated">Otra caracteristica hermosa que el fer tiene que poner porque el desarrollador no tiene creatividad.</p>
+            <h3>Servicio personalizado</h3>
+            <p class="animate__animated">Cada empresa es única, por lo que nosotros nos aseguramos de crear la solución que mejor se adapte a tu empresa!</p>
 
             <h3>Presupuesto sin cargo</h3>
             <p class="animate__animated">Contanos lo que necesitas o cuál es tu problema; ¡Nosotros te ofrecemos una solución y te pasamos presupuesto sin cargo!</p>

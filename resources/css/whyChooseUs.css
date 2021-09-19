@@ -8,6 +8,7 @@
   height: 31.25em;
 }
 #whyChooseUs > .text{
+  font-size: 1em;
   background-color: var(--color4);
   width: 50%;
   padding: 1.75em;
@@ -15,6 +16,7 @@
   padding-right: 3em;
 }
 #whyChooseUs > .text > h2{
+  opacity: 0;
   color: var(--color5);
   font-family: var(--font1);
   font-weight: bold;
@@ -27,7 +29,8 @@
   text-transform: uppercase;
 }
 #whyChooseUs > .text > p{
-  font-size: .8em;
+  opacity: 0;
+  font-size: .9em;
   color: var(--color1);
   font-family: var(--font2);
 
@@ -51,4 +54,71 @@
 #whyChooseUs svg.i1{
   right: 0;
   bottom: 0;
+}
+@media screen and (max-width: 950px){
+  #whyChooseUs > .text{
+    width: 60%;
+  }
+  #whyChooseUs > img{
+    width: 40%;
+  }
+  /* Yellow polygon */
+  #whyChooseUs svg.i0{
+    left: 60%;
+    top:0;
+  }
+}
+@media screen and (max-width: 800px){
+  #whyChooseUs > .text{
+    width: 60%;
+    padding: 1.75em 3em;
+  }
+}
+@media screen and (max-width: 700px){
+  #whyChooseUs > .text{
+    width: 75%;
+  }
+  #whyChooseUs > img{
+    width: 25%;
+  }
+  /* Yellow polygon */
+  #whyChooseUs svg.i0{
+    left: 75%;
+    top:0;
+  }
+}
+@media screen and (max-width: 560px){
+  #whyChooseUs > .text{
+    font-size: .9em;
+  }
+}
+@media screen and (max-width: 500px){
+  #whyChooseUs > .text{
+    padding: 1em 1.25em;
+  }
+  #whyChooseUs > .text > h2{
+    font-size: 1.75em;
+    text-align: center;
+  }
+  #whyChooseUs > .text > h3{
+    font-size: 1.05em;
+  }
+  #whyChooseUs > .text > p{
+    font-size: .85em;
+  }
+}
+@media screen and (max-width:410px){
+  #whyChooseUs{
+    height: 37.5em;
+  }
+}
+@media screen and (max-width:350px){
+  #whyChooseUs{
+    height: 40.62em;
+  }
+}
+@media screen and (max-width:300px){
+  #whyChooseUs{
+    height: 43.75em;
+  }
 }

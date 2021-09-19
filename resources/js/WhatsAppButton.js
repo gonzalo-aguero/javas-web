@@ -1,5 +1,5 @@
-"use strict";
-function whatsAppButtonInit() {
+
+function init() {
     let whatsappButton;
     let message;
     let second = 1000;//1000ms
@@ -18,10 +18,13 @@ function whatsAppButtonInit() {
             message.classList.remove("animate__backInRight");
             setInterval(() => {
                 message.classList.toggle("animate__bounce");
-            }, second * 10);
+            }, second * 8);
         }, second);
     }, second * 5);
     whatsappButton.addEventListener('click', ()=>{
         location.href = link;
     });
+}
+module.exports = {
+    init
 }

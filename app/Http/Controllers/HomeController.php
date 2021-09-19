@@ -8,13 +8,10 @@ class HomeController extends Controller
 {
     public function __invoke(){
         $styleSheets = [
+            asset('css/app.css')
         ];
         $scripts = [
-            asset('js/screenAdaptations.js'),
-            asset('js/animationsHandler.js'),
-            asset('js/menu.js'),
-            asset('js/WhatsAppButton.js'),
-            asset('js/index.js')
+            asset('js/app.js')
         ];
         $isHomePage = true;
         $params = compact('styleSheets', 'scripts', 'isHomePage');

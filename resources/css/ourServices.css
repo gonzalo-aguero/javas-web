@@ -14,6 +14,7 @@
   z-index: 1;
 }
 #ourServices > h2{
+  display: none;
   color: var(--color4);
   font-family: var(--font1);
   margin-top:0;
@@ -23,8 +24,10 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
+  z-index:1;
 }
 #ourServices .service{
+  opacity: 0;
   display: flex;
   flex-flow: column;
   width: 15em;
@@ -60,4 +63,52 @@
 #ourServices .decorationBlock.i1{
   right:0;
   top:0;
+}
+@media screen and (max-width:1100px){
+  #ourServices > h2{
+    font-size: 2.4em;
+  }
+  #ourServices > .services{
+    font-size: .85em;
+  }
+}
+@media screen and (max-width:850px){
+  #ourServices > .services{
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-left: 8em;
+    margin-right: 8em;
+  }
+  #ourServices > h2{
+    font-size: 2.1em;
+  }
+  #ourServices > .services{
+    font-size: .75em;
+  }
+}
+@media screen and (max-width:600px){
+  #ourServices{
+    height: 43.75em;
+    gap: 0em;
+  }
+  #ourServices > h2{
+    font-size: 1.75em;
+    margin-bottom: .25em;
+  }
+  #ourServices > .services{
+    gap: 3em;
+  }
+}
+@media screen and (max-width:500px){
+  #ourServices{
+    height: 56.25em;
+  }
+  #ourServices > .services{
+    font-size: .9em;
+  }
+}
+@media screen and (max-width:400px){
+  #ourServices > h2{
+    font-size: 1.7em;
+  }
 }

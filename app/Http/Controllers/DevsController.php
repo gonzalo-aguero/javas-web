@@ -10,14 +10,11 @@ class DevsController extends Controller
 {
     public function index(){
         $styleSheets = [
+            asset('css/app.css'),
             asset('css/devs.css')
         ];
         $scripts = [
-            asset('js/screenAdaptations.js'),
-            asset('js/animationsHandler.js'),
-            asset('js/menu.js'),
-            asset('js/WhatsAppButton.js'),
-            asset('js/index.js')
+            asset('js/app.js')
         ];
         $params = compact('styleSheets', 'scripts');
         return view('devs', $params);
@@ -31,20 +28,7 @@ class DevsController extends Controller
 
         $mail = new ContactMailable($request->all());
         Mail::to('gonzaloaguerodev@gmail.com')->send($mail);
+
         return redirect()->route('devs')->with('info', 'Mensaje enviado correctamente.');
-        // require_once(__DIR__."/../../vendor/autoload.php");
-        // $mailin = new Mailin('gonzaloaguerodev@gmail.com', 'J8HW9p6zSPtQNhma');
-        // $mailin->
-        //     addTo('gonzaloaguerodev@gmail.com', 'Gonzalo Agüero')->
-        //     setFrom('gonzaloaguerodev@gmail.com', 'Gonzalo Agüero')->
-        //     setReplyTo('gonzaloaguerodev@gmail.com','Gonzalo Agüero')->
-        //     setSubject('Escriba el asunto aquí')->
-        //     setText('Hola')->
-        //     setHtml('<strong>Hola</strong>');
-        // $res = $mailin->send();
-        // /**
-        // El mensaje de éxito será enviado de esta forma:
-        // {'result' => true, 'message' => 'E-mail enviado'}
-        // */
     }
 }

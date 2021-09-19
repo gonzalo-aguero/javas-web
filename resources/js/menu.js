@@ -6,7 +6,8 @@ var closeMenuButton;
 var header;
 var coverPage;
 var hash;
-function menuInit(){
+const currentPage = require('./page').currentPage();
+function init(){
     mobileMenu = window.screen.width > 790 ? false : true;
     mainMenu = document.querySelector("#mainNavigation > ul");
     logoAndTitle = document.querySelectorAll("#siteIdentity > img, #siteIdentity h2");
@@ -17,9 +18,9 @@ function menuInit(){
     hash = window.location.hash;
 
     //Margin for the coverPage equal to header height since the header has position:fixed.
-    if(isDevsPage){
+    if(currentPage.isDevsPage){
         document.querySelector("section.i0").style.marginTop = header.offsetHeight + "px";
-    }else if(isHomePage){
+    }else if(currentPage.isHomePage){
         coverPage.style.marginTop = header.offsetHeight + "px";
     }
     //Only when the mobile menu is applied.
@@ -109,4 +110,7 @@ function scrollToSection() {
     if(doScroll){
         scrollTo(0,y);
     }
+}
+module.exports = {
+    init
 }

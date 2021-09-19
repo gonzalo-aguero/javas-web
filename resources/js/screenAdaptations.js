@@ -1,6 +1,6 @@
-"use strict";
-function screenAdaptationsInit(){
-    if(isHomePage){
+const currentPage = require('./page').currentPage();
+function init(){
+    if(currentPage.isHomePage){
         try{
             aboutUsSVG();
             ourServicesSVG();
@@ -9,7 +9,7 @@ function screenAdaptationsInit(){
         } catch (error) {
             console.warn("This exception can be thrown simply by not being on the home page. In this case ignore it.\n", error);
         }
-    }else if(isDevsPage){
+    }else if(currentPage.isDevsPage){
         try{
             devSectionsSVG();
             footerSVG();
@@ -160,4 +160,7 @@ function devSectionsSVG(){
         points = points.replaceAll(originalSize, newSize);
         polygon.setAttribute('points', points);
     });
+}
+module.exports = {
+    init
 }

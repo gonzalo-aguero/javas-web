@@ -1,124 +1,152 @@
 #aboutUs{
-    font-size: 16px;
-    background-color: var(--color1);
-    position: relative;
-    z-index: -1;
-    height: 31.25em;
-    box-sizing: border-box;
-  }
+  font-size: 16px;
+  background-color: var(--color1);
+  position: relative;
+  z-index: -1;
+  height: 31.25em;
+}
+#aboutUs::before{
+  content: "";
+  background-color: rgb(41 33 59 / 0.65);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
-  #aboutUs > .image{
-    position: absolute;
-    width: 18em;
-    height: 200%;
-    left: 5em;
-    top: -45%;
-    --rotate: -45deg;
-    transform: rotate(var(--rotate));
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
 
-  #aboutUs > .image::before{
-    content: "";
-    background-color: rgb(41 33 59 / 0.65);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
+#aboutUs > img{
+  position: relative;
+  width: 55%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  z-index: -1;
+}
+#aboutUs > .text{
+  font-size: 1.1em;
+  position: absolute;
+  right:0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  padding: 6em 4em;
+  z-index: 1;
+}
 
-  #aboutUs > .decorationBlock{
-    position: absolute;
-    left: 9.54em;
-    top:0;
-  }
+#aboutUs > .text > h1{
+  display: none;
+  font-family: var(--font1);
+  font-weight: bold;
+  color: var(--color4);
+  text-align: right;
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
 
+#aboutUs > .text > p{
+  display: none;
+  font-family: var(--font2);
+  font-weight: normal;
+  color: var(--color5);
+  text-align: right;
+}
+/* #region SVG Figures */
+#aboutUs > svg.i0,
+#aboutUs > svg.i1,
+#aboutUs > svg.i2{
+  position: absolute;
+}
+#aboutUs > svg.i0{
+  right: 600px;
+  top:0;
+}
+#aboutUs > svg.i1{
+  right: 0;
+  top:0;
+}
+#aboutUs > svg.i2{
+  left:0;
+  bottom: 0;
+}
+/* #endregion SVG Figures */
+@media screen and (max-width: 1200px){
+  /* #region SVG Figures */
+  #aboutUs > svg.i0{
+    right: 400px;
+  }
+  #aboutUs > svg.i1{
+    right: -200px;
+  }
+  /* #endregion SVG Figures */
+}
+@media screen and (max-width: 960px){
+  #aboutUs > .text{
+    padding: 6em 1.5em;
+  }
+  /* #region SVG Figures */
+  #aboutUs > svg.i0{
+    right: 250px;
+  }
+  #aboutUs > svg.i1{
+    right: -350px;
+  }
+  /* #endregion SVG Figures */
+}
+@media screen and (max-width: 790px){
+  /* #region SVG Figures */
+  #aboutUs > svg.i0{
+    right: 300px;
+  }
+  #aboutUs > svg.i1{
+    right: 0;
+  }
+  /* #endregion SVG Figures */
+}
+@media screen and (max-width: 650px){
   #aboutUs > .text{
     font-size: 1em;
-    position: absolute;
-    right:0;
-    top: 0;
-    width: 40%;
-    height: 100%;
-    padding: 8em 4em;
+    width: 400px;
   }
+}
+@media screen and (max-width: 480px){
+  #aboutUs > .text{
+    font-size: .9em;
+    width: 280px;
+  }
+  /* #region SVG Figures */
+  #aboutUs > svg.i0{
+    right: 200px;
+  }
+  #aboutUs > svg.i1{
+    right: -100px;
+  }
+  /* #endregion SVG Figures */
+}
+@media screen and (max-width: 380px){
+  #aboutUs > .text{
+    width: 250px;
+  }
+  /* #region SVG Figures */
+  #aboutUs > svg.i0{
+    right: 180px;
+  }
+  #aboutUs > svg.i1{
+    right: -120px;
+  }
+  /* #endregion SVG Figures */
+}
 
-  #aboutUs > .text > h1{
-    font-family: var(--font1);
-    font-weight: bold;
-    color: var(--color4);
-    text-align: right;
-    font-size: 1.8em;
+@media screen and (max-width: 350px){
+  /* #region SVG Figures */
+  #aboutUs > svg.i2{
+    display: none;
   }
-
-  #aboutUs > .text > p{
-    font-family: var(--font2);
-    font-weight: normal;
-    color: var(--color5);
-    text-align: right;
+  /* #endregion SVG Figures */
+}
+@media screen and (max-width: 250px){
+   #aboutUs > .text{
+    width: 100%;
   }
-
-  @media screen and (max-width: 1100px){
-    #aboutUs > .text{
-      font-size: 1em;
-      width: 50%;
-    }
-  }
-  @media screen and (max-width: 900px){
-    #aboutUs > .text{
-      width: 60%;
-      padding: 8em 4em;
-      padding-right: 2em;
-    }
-    #aboutUs{
-      font-size: 14px;
-    }
-  }
-  @media screen and (max-width: 750px){
-    #aboutUs > .image{
-      width: 11em;
-      left: 2em;
-    }
-    /* New size: 300*150 */
-    #aboutUs > .decorationBlock{
-      left: -1.9em;
-    }
-  }
-  @media screen and (max-width: 600px){
-    #aboutUs{
-      font-size: 10px;
-    }
-    #aboutUs > .image{
-      width: 11em;
-      left: 2em;
-    }
-    /* New size: 200*100 */
-    #aboutUs > .decorationBlock{
-      left: -1.9em;
-    }
-    #aboutUs > .text{
-      font-size: 1.1em;
-      padding: 7em 4em;
-      padding-right: 2em;
-    }
-  }
-  @media screen and (max-width: 450px){
-    #aboutUs > .image{
-      display:none;
-    }
-    /* New size: 200*100 */
-    #aboutUs > .decorationBlock{
-      display:none;
-    }
-    #aboutUs > .text{
-      position: relative;
-      font-size: 1.1em;
-      padding: 7em 4em;
-      width:100%;
-    }
-    #aboutUs > .text > h1,
-    #aboutUs > .text > p{
-      text-align: center;
-    }
-  }
+}

@@ -13,7 +13,6 @@
 
     <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}" />
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
     @if (isset($styleSheets))
         @foreach ($styleSheets as $href)
             <link rel="stylesheet" href="{{$href}}">
