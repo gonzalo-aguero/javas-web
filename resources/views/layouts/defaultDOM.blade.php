@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <meta name="robots" content="index,follow"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
     <meta name="keywords" content="desarrollo web,web,www,diseño web,diseño,agencia desarrollo web,web developer,software,desarrollo de software"/>
     <meta name="description" content="Somos JavasWeb, una consultora especializada en el desarrollo web.
         Buscamos ofrecer a nuestros clientes el mejor servicio, pensando siempre en la mejor calidad a cambio del mejor precio."/>
     <meta name="author" content="gonzaloaguerodev@gmail.com" />
+    <meta name="copyright" content="Javas Web" />
+    <link rel="canonical" href="@yield('url')"/>
 
     <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}" />
     <title>@yield('title')</title>

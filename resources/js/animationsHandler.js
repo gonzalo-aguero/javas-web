@@ -21,7 +21,7 @@ function init(){
     if(currentPage.isHomePage){
         aboutUsAnimated = false;
         aboutUs = document.getElementById("aboutUs");
-        aboutUsTitle = document.querySelector("#aboutUs .text > h1");
+        aboutUsTitle = document.querySelector("#aboutUs .text > h2");
         aboutUsText = document.querySelector("#aboutUs .text > p");
 
         ourServicesAnimated = false;

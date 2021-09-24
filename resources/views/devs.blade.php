@@ -1,3 +1,4 @@
+@section('url', 'https://javasweb.com/devs')
 @section('title', 'Desarrolladores')
 @extends('layouts.defaultDOM')
 @section('content')

@@ -1,3 +1,4 @@
+@section('url', 'https://javasweb.com/')
 @section('title', 'JAVAS WEB')
 @section('isHomePage', true)
 @extends('layouts.defaultDOM')
@@ -17,14 +18,14 @@
             <polygon points="500,0 500,500 0,500" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
         </svg>
         <div class="text animate__animated animate__fadeInLeftBig">
-            <h1>JAVAS<br>WEB</h1>
+            <h1>JAVAS WEB</h1>
             <p class="animate__animated animate__fadeIn animate__delay-1s">Consultora de desarrollo web</p>
         </div>
     </section>
     <section id="aboutUs">
         <img src="{{asset('img/design/aboutUs.jpg')}}">
         <div class="text">
-            <h1 class="animate__animated animate__fadeInLeft">INFORMACIÓN SOBRE LA EMPRESA</h1>
+            <h2 class="animate__animated animate__fadeInLeft">INFORMACIÓN SOBRE LA EMPRESA</h2>
             <p class="animate__animated animate__fadeInRight">
                 Somos JavasWeb, una consultora especializada en el desarrollo web.
                 Buscamos ofrecer a nuestros clientes el mejor servicio, pensando siempre
