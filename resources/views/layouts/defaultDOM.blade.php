@@ -34,10 +34,10 @@
         </div>
         <nav class="right" id="mainNavigation">
             <button class="imageButton">
-                <img src="{{asset('img/icons/menu_white_24dp.svg')}}" id="openMenu" alt="Menu">
+                <img src="{{asset('img/icons/menu_black_24dp.svg')}}" id="openMenu" alt="Menu">
             </button>
             <button class="imageButton">
-                <img src="{{asset('img/icons/close_white_24dp.svg')}}" id="closeMenu" alt="Menu" style="display:none;">
+                <img src="{{asset('img/icons/close_black_24dp.svg')}}" id="closeMenu" alt="Menu" style="display:none;">
             </button>
             <ul class="animate__animated animate__fadeInDown animate__delay-2s">
                 @if (isset($isHomePage) && $isHomePage === true)

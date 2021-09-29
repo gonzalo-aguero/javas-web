@@ -45,10 +45,14 @@
             @error('telephone')
                 <small>{{$message}}</small>
             @enderror
+            <input type="text" name="message" id="message" placeholder="Mensaje" value="{{old('message')}}">
+            @error('message')
+                <small>{{$message}}</small>
+            @enderror
             <input type="submit" value="Enviar">
             @if (session('info'))
                 <script>
-                    alert("{{session('info')}}");
+                    setTimeout(()=> alert("{{session('info')}}"), 1200);
                 </script>
             @endif
         </form>

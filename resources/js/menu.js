@@ -8,7 +8,7 @@ var coverPage;
 var hash;
 const currentPage = require('./page').currentPage();
 function init(){
-    mobileMenu = window.screen.width > 790 ? false : true;
+    mobileMenu = window.screen.width > 1110 ? false : true;
     mainMenu = document.querySelector("#mainNavigation > ul");
     logoAndTitle = document.querySelectorAll("#siteIdentity > img, #siteIdentity h2");
     openMenuButton = document.getElementById("openMenu");

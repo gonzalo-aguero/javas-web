@@ -56,6 +56,7 @@
 
 #siteIdentity > div > h2.i1{
   color: var(--color4);
+  margin-left: 0.15em;
 }
 #mainNavigation{
   text-align: right;
@@ -86,7 +87,7 @@
 
 #mainNavigation > ul > li > a{
   text-decoration: none !important;
-  color: var(--color8);
+  color: var(--color7);
   font-family: var(--font3);
   font-size: 1em;
   padding: .5em .2em .5em .2em;
@@ -95,9 +96,10 @@
 }
 #mainNavigation > ul > li > a:hover,
 #mainNavigation > ul > li > a:active{
-  color: var(--color4);
+  color: var(--color8);
 }
-@media screen and (max-width: 790px){
+@media screen and (max-width: 1110px){
+/* @media screen and (max-width: 790px){ */
   #openMenu{
     display: inline-block;
   }
