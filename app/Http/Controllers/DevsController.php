@@ -36,8 +36,7 @@ class DevsController extends Controller
             'email' => 'required|email',
             'telephone' => 'required'
         ]);
-
-        $apiKey = "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";
+        $apiKey = env("SENDINBLUE_API_KEY");
         $config = \SendInBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', $apiKey);
         $apiInstance = new \SendInBlue\Client\Api\TransactionalEmailsApi(
             new \GuzzleHttp\Client(),
