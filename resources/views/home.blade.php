@@ -23,31 +23,52 @@
         <h2>HELLO</h2>
         <p>Somos Javas Web: Desarrollo de software a medida.</p>
     </section>
-    <section id="ourServices">
-        <!-- Black triangle -->
-        <svg width="300" height="300" class="decorationBlock i0">
-            <polygon points="0,0 300,300 0,300" stroke="none" stroke-width="0" fill="var(--color6)"></polygon>
-        </svg>
-        <!-- Yellow triangle -->
-        <svg width="300" height="300" class="decorationBlock i1">
-            <polygon points="0,0 300,300 300,0" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
-        </svg>
-        <h2 class="animate__animated animate__fadeIn">NUESTROS SERVICIOS</h2>
+    <section id="services">
+        <h2 class="animate__animated animate__fadeIn" id="servicesTitle">SERVICIOS</h2>
         <div class="services">
             <div class="service i0 animate__animated">
-                <img src="{{asset('img/icons/ourServicesIcon1.svg')}}" alt="">
-                <h3>CONSULTORÍA WEB</h3>
-                <p>Creamos una solución para vos a través de la web.</p>
+                <img class="serviceIcon" src="{{asset('img/design/services/software a medida.svg')}}" alt="Software a medida">
+                <h3>Software a medida</h3>
+                <p>Desarrollamos una solución de software a medida con las últimas tecnologías,
+                    conforme a las necesidades y funcionalidades de tu negocio.</p>
+                <a href="#" class="info">INFO</a>
             </div>
             <div class="service i1 animate__animated">
-                <img src="{{asset('img/icons/ourServicesIcon2.png')}}" alt="">
-                <h3>MANTENIMIENTO</h3>
-                <p>Nos encargamos de mantener vivo tu sitio web y hacer los cambios que necesites.</p>
+                <img class="serviceIcon" src="{{asset('img/design/services/ecommerce and website.svg')}}" alt="Ecommerce and Website">
+                <h3>Ecommerce & Website</h3>
+                <p>Creamos tu sitio web o tienda online (ecommerce) adaptada a tus necesidades,
+                    creando siempre la mejor solución para aumentar las ventas de tu empresa.</p>
+                <a href="#" class="info">INFO</a>
             </div>
             <div class="service i2 animate__animated">
-                <img src="{{asset('img/icons/ourServicesIcon3.svg')}}" alt="">
-                <h3>DERIVACIÓN DE CLIENTES</h3>
-                <p>¡Si sos desarrollador/a, en caso de no poder tomar un cliente te lo derivamos!</p>
+                <img class="serviceIcon" src="{{asset('img/design/services/apps.svg')}}" alt="Apps Móviles">
+                <h3>Apps Móviles</h3>
+                <p>Desarrollamos aplicaciones para los principales mercados como App Store para
+                    dispositivos iOS y Google Play para dispositivos Android.</p>
+                <a href="#" class="info">INFO</a>
+            </div>
+
+
+            <div class="service i0 animate__animated">
+                <img class="serviceIcon" src="{{asset('img/design/services/software a medida.svg')}}" alt="Software a medida">
+                <h3>Software a medida</h3>
+                <p>Desarrollamos una solución de software a medida con las últimas tecnologías,
+                    conforme a las necesidades y funcionalidades de tu negocio.</p>
+                <a href="#" class="info">INFO</a>
+            </div>
+            <div class="service i1 animate__animated">
+                <img class="serviceIcon" src="{{asset('img/design/services/ecommerce and website.svg')}}" alt="Ecommerce and Website">
+                <h3>Ecommerce & Website</h3>
+                <p>Creamos tu sitio web o tienda online (ecommerce) adaptada a tus necesidades,
+                    creando siempre la mejor solución para aumentar las ventas de tu empresa.</p>
+                <a href="#" class="info">INFO</a>
+            </div>
+            <div class="service i2 animate__animated">
+                <img class="serviceIcon" src="{{asset('img/design/services/apps.svg')}}" alt="Apps Móviles">
+                <h3>Apps Móviles</h3>
+                <p>Desarrollamos aplicaciones para los principales mercados como App Store para
+                    dispositivos iOS y Google Play para dispositivos Android.</p>
+                <a href="#" class="info">INFO</a>
             </div>
         </div>
     </section>

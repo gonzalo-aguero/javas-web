@@ -4,9 +4,10 @@
 @import "header.css";
 @import "coverPage.css";
 @import "hello.css";
+@import "services.css";
+
 
 @import "aboutUs.css";
-@import "ourServices.css";
 @import "whyChooseUs.css";
 @import "footer.css";
 @import "animate.min.css";
