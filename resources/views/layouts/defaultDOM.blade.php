@@ -26,7 +26,7 @@
 <body>
     <header id="header">
         <div class="left animate__animated animate__fadeIn animate__slow" id="siteIdentity">
-            <img src="{{asset('img/favicon.png')}}" alt="Logo JavasWeb">
+            {{-- <img src="{{asset('img/favicon.png')}}" alt="Logo JavasWeb"> --}}
             <div>
                 <h2 class="i0">JAVAS</h2>
                 <h2 class="i1">WEB</h2>
@@ -34,24 +34,24 @@
         </div>
         <nav class="right" id="mainNavigation">
             <button class="imageButton">
-                <img src="{{asset('img/icons/menu_black_24dp.svg')}}" id="openMenu" alt="Menu">
+                <img src="{{asset('img/icons/menu_white_24dp.svg')}}" id="openMenu" alt="Abrir menu">
             </button>
             <button class="imageButton">
-                <img src="{{asset('img/icons/close_black_24dp.svg')}}" id="closeMenu" alt="Menu" style="display:none;">
+                <img src="{{asset('img/icons/close_white_24dp.svg')}}" id="closeMenu" alt="Cerrar menu" style="display:none;">
             </button>
             <ul class="animate__animated animate__fadeInDown animate__delay-2s">
                 @if (isset($isHomePage) && $isHomePage === true)
-                    <li><a href="#">Inicio<a></li>
+                    <li><a href="#" class="current">Home<a></li>
                     <li><a href="#_aboutUs">Nosotros<a></li>
                     <li><a href="#_ourServices">Servicios<a></li>
-                    <li><a href="#_whyChooseUs">Por qué elegirnos<a></li>
+                    <li><a href="#_whyChooseUs">Trabajos<a></li>
                     <li><a href="#_footer">Contacto<a></li>
                     <li><a href="{{route('devs')}}">Desarrollador<a></li>
                 @else
-                    <li><a href="{{route('home')}}#">Inicio<a></li>
+                    <li><a href="{{route('home')}}#" class="current">Home<a></li>
                     <li><a href="{{route('home')}}#_aboutUs">Nosotros<a></li>
                     <li><a href="{{route('home')}}#_ourServices">Servicios<a></li>
-                    <li><a href="{{route('home')}}#_whyChooseUs">Por qué elegirnos<a></li>
+                    <li><a href="{{route('home')}}#_whyChooseUs">Trabajos<a></li>
                     <li><a href="{{route('home')}}#_footer">Contacto<a></li>
                     <li><a href="{{route('devs')}}">Desarrollador<a></li>
                 @endif

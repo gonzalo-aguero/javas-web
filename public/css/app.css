@@ -1,19 +1,14 @@
-@import url(https://fonts.googleapis.com/css2?family=Russo+One&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap);
 #header{
   font-size: 16px;
   width: 100%;
-  background-color: rgb(255 255 255 / 95%);
-  color: var(--color2);
+  background-color: #212121;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5em;
+  height: 4.375em;
   position: fixed;
   box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
-  padding-left: 4em;
-  padding-right: 4em;
+  padding: 0 1.87em;
   z-index:10;
 }
 
@@ -38,35 +33,30 @@
 }
 
 #siteIdentity > div{
-  margin-left: 1em;
   display: flex;
   flex-flow: row;
 }
 
 #siteIdentity > div > h2{
-  margin:0;
-  line-height: 1em;
-  font-weight: bold;
-  font-family: var(--font2);
-  font-size: 1.85em;
+  font-weight: 400;
+  font-family: "Montserrat";
+  font-size: 1.4em;
   cursor: pointer;
 }
 
 #siteIdentity > div > h2.i0{
-  color: var(--color7);
+  color: var(--white);
 }
 
 #siteIdentity > div > h2.i1{
-  color: var(--color4);
-  margin-left: 0.15em;
+  color: var(--orange);
+  margin-left: 0.25em;
 }
 
 #mainNavigation{
-  text-align: right;
   display: flex;
   flex-flow: row nowrap;
   justify-content: right;
-  position:relative;
 }
 
 #openMenu,
@@ -92,23 +82,24 @@
 }
 
 #mainNavigation > ul > li > a{
-  text-decoration: none !important;
-  color: var(--color7);
-  font-family: var(--font3);
-  font-size: 1em;
-  padding: .5em .2em .5em .2em;
-  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  font-family: "Montserrat";
+  font-size: .77em;
+  padding: .75em .4em .75em .4em;
   text-transform: uppercase;
+}
+
+#mainNavigation .current{
+  color: var(--orange);
 }
 
 #mainNavigation > ul > li > a:hover,
 #mainNavigation > ul > li > a:active{
-  color: var(--color8);
+  color: var(--lightBlue);
 }
 
-@media screen and (max-width: 1110px){
-  /* @media screen and (max-width: 790px){ */
-
+@media screen and (max-width: 960px){
   #openMenu{
     display: inline-block;
   }
@@ -116,12 +107,12 @@
   #mainNavigation > ul{
     display: none;
     position: fixed;
-    background-color: rgb(9 9 9 / 0.9);
+    background-color: rgb(33 33 33 / 95%);
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
     gap: .5em;
-    top: 4em;
+    top: 3.325em;
     left:0;
     width: 70%;
     height: 100%;
@@ -134,7 +125,7 @@
 
   #mainNavigation > ul > li > a{
     font-size: 1.15em;
-    padding: .5em .2em .5em .2em;
+    padding: .75em .4em .75em .4em;
     display: block;
   }
 }
@@ -146,149 +137,152 @@
   }
 }
 
-@media screen and (max-width: 360px){
-  #header{
-    padding-left: 1em;
-    padding-right: 1em;
+@media screen and (max-width: 450px){
+  #mainNavigation > ul > li > a{
+    font-size: 1.05em;
+    padding: .6em .3em .6em .3em;
   }
 }
 
-@media screen and (max-width: 300px){
+@media screen and (max-width: 380px){
   #header{
     font-size: 13px;
   }
 }
 
+@media screen and (max-width: 300px){
+  #header{
+    font-size: 11px;
+  }
+}
+
 #coverPage{
   font-size: 16px;
-  width: 100%;
-  height: 31.25em;
-  position: relative;
-  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+  display: flex;
+  width:100%;
+  justify-content: center;
+  align-items: center;
 }
 
-#coverPageImage{
-  position: absolute;
-  width: 100%;
+#coverPageText{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
   height: 100%;
+  padding: 5em;
+  color: var(--white);
+  font-family: var(--fontTitle);
 }
 
-#coverPageImage > span{
-  position: absolute;
-  background-color: rgb(0 0 0 / 75%);
-  width: 100%;
-  height: 100%;
+#coverPageText > img{
+  height: 8.125em;
 }
 
-#coverPageImage > img{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+#coverPageText > h1{
+  font-size: 3.125em;
+  font-weight: 400;
+  margin-top: .5em;
+  margin-bottom: 0;
 }
 
-#coverPage > .decorationBlock.i0{
-  position: absolute;
-  right: 0;
-  top: 0;
+#coverPageText > p{
+  font-size: 1.25em;
+  font-weight: 300;
+  width: 26em;
+  text-align: center;
 }
 
-#coverPage > .decorationBlock.i1{
-  position: absolute;
-  right: 0;
-  top: 0;
+#startButton{
+  border: 0.1em var(--white) solid;
+  border-radius: 1.25em;
+  padding: .5em;
+  width: 10em;
+  text-align: center;
+  cursor: pointer;
 }
 
-#coverPage > .text{
-  position: absolute;
-  font-size: 1em;
-  left: 7em;
-  top: 7em;
+#startButton:hover,
+#startButton:active{
+  background-color: var(--white);
+  color: var(--lightBlue);
+  transition: 0.15s;
 }
 
-#coverPage > .text > h1{
-  font-family: var(--font1);
-  font-weight: bold;
-  color: var(--color3);
-  font-size: 6.5em;
-  line-height: 1em;
-  margin:0;
-  text-shadow: 1px 0px 3px rgba(0,0,0,0.75);
-}
-
-#coverPage > .text > p{
-  font-family: var(--font2);
-  font-size: 1.65em;
-  color: var(--color2);
-  text-shadow: 0px 0px 3px rgba(0,0,0,0.6);
-}
-
-@media screen and (max-width: 790px){
-  #coverPage > .text{
-    font-size: .9em;
-  }
-
-  #coverPage > .decorationBlock.i0{
-    right: -15em;
-  }
-
-  #coverPage > .decorationBlock.i1{
-    right: -10em;
-  }
-}
-
-@media screen and (max-width: 600px){
+@media screen and (max-width: 530px){
   #coverPage{
-    display: flex;
-    justify-content: center;
-    align-items:center;
+    font-size: 14px;
   }
 
-  #coverPage > .text{
-    position: relative;
-    left: auto;
-    top: auto;
+  #coverPageText > h1{
+    font-size: 3em;
   }
 
-  #coverPage > .decorationBlock.i0{
-    right: -15em;
-  }
-
-  #coverPage > .decorationBlock.i1{
-    right: -10em;
-  }
-}
-
-@media screen and (max-width: 500px){
-  #coverPage > .decorationBlock.i0{
-    right: -25em;
-  }
-
-  #coverPage > .decorationBlock.i1{
-    right: -15em;
+  #coverPageText > p{
+    width: 22em;
   }
 }
 
 @media screen and (max-width: 400px){
-  #coverPage > .text{
-    font-size: .7em;
-  }
-}
-
-@media screen and (max-width: 360px){
-  #coverPage > .decorationBlock.i0{
-    right: -32em;
+  #coverPageText > h1{
+    font-size: 2.25em;
   }
 
-  #coverPage > .decorationBlock.i1{
-    right: -18em;
+  #coverPageText > p{
+    width: 16em;
   }
 }
 
 @media screen and (max-width: 300px){
-  #coverPage > .text{
-    font-size: .55em;
+  #coverPage{
+    font-size: 12px;
+  }
+}
+
+#hello{
+  background-color: #1D1D1D;
+  height: 9em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-family: var(--fontTitle);
+  padding: 2em 0.5em;
+}
+
+#hello > h2{
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+#hello > p{
+  margin-left: 2.5em;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 850px){
+  #hello{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 620px){
+  #hello{
+    min-height: 9em;
+    height: auto;
+  }
+
+  #hello > h2{
+    font-size: 2em;
+  }
+
+  #hello > p{
+    margin-left: 1.5em;
+    font-size: 1.4em;
   }
 }
 
@@ -4636,17 +4630,11 @@ footer svg.i0{
 @import "tailwindcss/utilities"; */
 
 :root{
-  --color1: #FFFFFF;
-  --color2: #E8E8E8;
-  --color3: #FFBE47;
-  --color4: #FEA501;
-  --color5: #3D3D3D;
-  --color6: #090909;
-  --color7: #0e6788;
-  --color8: #3a3a3a;
-  --font1: "Rajdhani";
-  --font2: "Roboto Condensed";
-  --font3: "Russo One";
+  --orange: #FEA501;
+  --lightBlue: #0e6788;
+  --white: #FFFFFF;
+  --fontTitle: "Montserrat";
+  --fontText: "Roboto";
 }
 
 *{

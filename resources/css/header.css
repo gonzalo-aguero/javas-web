@@ -1,24 +1,21 @@
 #header{
   font-size: 16px;
   width: 100%;
-  background-color: rgb(255 255 255 / 95%);
-  color: var(--color2);
+  background-color: #212121;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5em;
+  height: 4.375em;
   position: fixed;
-  -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
-  padding-left: 4em;
-  padding-right: 4em;
+  padding: 0 1.87em;
   z-index:10;
 }
 
 #header > .left{
   width: 25%;
 }
+
 #header > .right{
   width: 75%;
 }
@@ -36,35 +33,32 @@
 }
 
 #siteIdentity > div{
-  margin-left: 1em;
   display: flex;
   flex-flow: row;
 }
 
 #siteIdentity > div > h2{
-  margin:0;
-  line-height: 1em;
-  font-weight: bold;
-  font-family: var(--font2);
-  font-size: 1.85em;
+  font-weight: 400;
+  font-family: "Montserrat";
+  font-size: 1.4em;
   cursor: pointer;
 }
 
 #siteIdentity > div > h2.i0{
-  color: var(--color7);
+  color: var(--white);
 }
 
 #siteIdentity > div > h2.i1{
-  color: var(--color4);
-  margin-left: 0.15em;
+  color: var(--orange);
+  margin-left: 0.25em;
 }
+
 #mainNavigation{
-  text-align: right;
   display: flex;
   flex-flow: row nowrap;
   justify-content: right;
-  position:relative;
 }
+
 #openMenu,
 #closeMenu{
   display: none;
@@ -72,11 +66,13 @@
   cursor: pointer;
   transition: 0.1s;
 }
+
 #openMenu:hover,
 #closeMenu:hover{
   transform: scale(0.95,0.95);
   transition: 0.1s;
 }
+
 #mainNavigation > ul{
   display: flex;
   justify-content: space-evenly;
@@ -86,32 +82,36 @@
 }
 
 #mainNavigation > ul > li > a{
-  text-decoration: none !important;
-  color: var(--color7);
-  font-family: var(--font3);
-  font-size: 1em;
-  padding: .5em .2em .5em .2em;
-  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  font-family: "Montserrat";
+  font-size: .77em;
+  padding: .75em .4em .75em .4em;
   text-transform: uppercase;
 }
+
+#mainNavigation .current{
+  color: var(--orange);
+}
+
 #mainNavigation > ul > li > a:hover,
 #mainNavigation > ul > li > a:active{
-  color: var(--color8);
+  color: var(--lightBlue);
 }
-@media screen and (max-width: 1110px){
-/* @media screen and (max-width: 790px){ */
+
+@media screen and (max-width: 960px){
   #openMenu{
     display: inline-block;
   }
   #mainNavigation > ul{
     display: none;
     position: fixed;
-    background-color: rgb(9 9 9 / 0.9);
+    background-color: rgb(33 33 33 / 95%);
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
     gap: .5em;
-    top: 4em;
+    top: 3.325em;
     left:0;
     width: 70%;
     height: 100%;
@@ -122,7 +122,7 @@
   }
   #mainNavigation > ul > li > a{
     font-size: 1.15em;
-    padding: .5em .2em .5em .2em;
+    padding: .75em .4em .75em .4em;
     display: block;
   }
 }
@@ -132,14 +132,20 @@
     padding-right: 2em;
   }
 }
-@media screen and (max-width: 360px){
- #header{
-    padding-left: 1em;
-    padding-right: 1em;
+@media screen and (max-width: 450px){
+    #mainNavigation > ul > li > a{
+        font-size: 1.05em;
+        padding: .6em .3em .6em .3em;
+    }
+}
+@media screen and (max-width: 380px){
+  #header{
+    font-size: 13px;
   }
+
 }
 @media screen and (max-width: 300px){
- #header{
-    font-size: 13px;
+  #header{
+    font-size: 11px;
   }
 }

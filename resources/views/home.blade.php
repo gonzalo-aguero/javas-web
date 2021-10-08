@@ -3,47 +3,25 @@
 @section('isHomePage', true)
 @extends('layouts.defaultDOM')
 @section('content')
-    <section id="coverPage">
-        {{-- #29213b --}}
-        <div id="coverPageImage">
-            <img src="{{asset('img/design/coverpage.jpg')}}">
-            <span></span>
-        </div>
-        <!-- White triangle -->
-        <svg width="740" height="500" class="decorationBlock i0">
-            <polygon points="0,0 740,0 740,500" stroke="none" stroke-width="0" fill="var(--color1)"></polygon>
-        </svg>
-        <!-- Yellow Triangle -->
-        <svg width="500" height="500" class="decorationBlock i1">
-            <polygon points="500,0 500,500 0,500" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
-        </svg>
-        <div class="text animate__animated animate__fadeInLeftBig">
-            <h1>JAVAS WEB</h1>
-            <p class="animate__animated animate__fadeIn animate__delay-1s">Consultora de desarrollo web</p>
+    <section id="coverPage" style="
+            background: linear-gradient(270deg, rgba(14, 70, 136, 0.6) 0%, rgba(254, 165, 1, 0.6) 100%),
+            url({{asset('img/design/coverpage.jpg')}});
+            background-size: cover;
+            background-position: center center;
+        ">
+        <div class="text animate__animated animate__fadeInLeftBig" id="coverPageText">
+            <img src="{{asset('img/whiteFavicon.png')}}" alt="Logo Javas Web">
+            <h1>[ Desarrollo Web ]</h1>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">
+                Tenés un proyecto? Tu empresa está en crecimiento? Necesitás un sitio web?
+                No lo dudes! <strong>Presupuesto sin cargo!</strong>
+            </p>
+            <span id="startButton">COMENZAR</span>
         </div>
     </section>
-    <section id="aboutUs">
-        <img src="{{asset('img/design/aboutUs.jpg')}}">
-        <div class="text">
-            <h2 class="animate__animated animate__fadeInLeft">INFORMACIÓN SOBRE LA EMPRESA</h2>
-            <p class="animate__animated animate__fadeInRight">
-                Somos JavasWeb, una consultora especializada en el desarrollo web.
-                Buscamos ofrecer a nuestros clientes el mejor servicio, pensando siempre
-                en la mejor calidad a cambio del mejor precio.
-            </p>
-        </div>
-        <!-- Yellow Triangle -->
-        <svg width="600" height="300" class="i0">
-            <polygon points="0,0 600,0 300,300" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
-        </svg>
-        <!-- White Polygon -->
-        <svg width="900" height="500" class="i1">
-            <polygon points="300,0 900,0 900,500 200,500 0,300" stroke="none" stroke-width="0" fill="var(--color1)" class=""></polygon>
-        </svg>
-        <!-- White Triangle -->
-        <svg width="250" height="250" class="i2">
-            <polygon points="0,0 250,250 0,250" stroke="none" stroke-width="0" fill="var(--color1)"></polygon>
-        </svg>
+    <section id="hello">
+        <h2>HELLO</h2>
+        <p>Somos Javas Web: Desarrollo de software a medida.</p>
     </section>
     <section id="ourServices">
         <!-- Black triangle -->

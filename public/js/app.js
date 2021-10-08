@@ -43,147 +43,10 @@ module.exports = {
 /*!*******************************************!*\
   !*** ./resources/js/animationsHandler.js ***!
   \*******************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var aboutUsAnimated;
-var aboutUs;
-var aboutUsTitle;
-var aboutUsText;
-var ourServicesAnimated;
-var ourServices;
-var ourServicesTitle;
-var ourServicesItems;
-var whyChooseUsAnimated;
-var whyChooseUs;
-var whyChooseUsTitle;
-var whyChooseUsItems;
-var footerAnimated;
-var footer;
-var footerTitle;
-var footerItems;
-var warnMsg = "This exception can be thrown simply by not being on the home page. In this case ignore it.\n";
-
-var currentPage = __webpack_require__(/*! ./page */ "./resources/js/page.js").currentPage();
+/***/ ((module) => {
 
 function init() {
-  if (currentPage.isHomePage) {
-    aboutUsAnimated = false;
-    aboutUs = document.getElementById("aboutUs");
-    aboutUsTitle = document.querySelector("#aboutUs .text > h2");
-    aboutUsText = document.querySelector("#aboutUs .text > p");
-    ourServicesAnimated = false;
-    ourServices = document.getElementById("ourServices");
-    ourServicesTitle = document.querySelector("#ourServices > h2");
-    ourServicesItems = document.querySelectorAll("#ourServices .service");
-    whyChooseUsAnimated = false;
-    whyChooseUs = document.getElementById("whyChooseUs");
-    whyChooseUsTitle = document.querySelector("#whyChooseUs .text > h2");
-    whyChooseUsItems = document.querySelectorAll("#whyChooseUs .text > p");
-    footerAnimated = false;
-    footer = document.getElementById("footer");
-    footerTitle = document.querySelector("#footer .text h2");
-    footerItems = document.querySelectorAll("#footer .text p");
-  } else if (currentPage.isDevsPage) {
-    footerAnimated = false;
-    footer = document.getElementById("footer");
-    footerTitle = document.querySelector("#footer .text h2");
-    footerItems = document.querySelectorAll("#footer .text p");
-  }
-
-  window.addEventListener("scroll", scrollEventsHandler);
-}
-
-function scrollEventsHandler() {
-  var y = window.scrollY;
-  var anticipation = 200;
-  var footerCondition = !footerAnimated && y >= footer.offsetTop - 350;
-
-  if (currentPage.isHomePage) {
-    //Scroll events in the home page.
-    try {
-      if (!aboutUsAnimated && y >= aboutUs.offsetTop - anticipation) {
-        aboutUsAnimations();
-      } else if (!ourServicesAnimated && y >= ourServices.offsetTop - anticipation) {
-        ourServicesAnimations();
-      } else if (!whyChooseUsAnimated && y >= whyChooseUs.offsetTop - anticipation) {
-        whyChooseUsAnimations();
-      } else if (footerCondition) {
-        footerAnimations();
-      }
-    } catch (error) {
-      console.warn(warnMsg, error);
-    }
-  } else if (currentPage.isDevsPage) {
-    //Scroll events in the devs page.
-    try {
-      if (footerCondition) {
-        footerAnimations();
-      }
-    } catch (error) {
-      console.warn("This exception can be thrown simply by not being on the devs page. In this case ignore it.\n", error);
-    }
-  } else {
-    console.warn("no animations");
-  }
-}
-
-function aboutUsAnimations() {
-  aboutUsTitle.style.display = "block";
-  setTimeout(function () {
-    aboutUsText.style.display = "block";
-  }, 500);
-  aboutUsAnimated = true;
-}
-
-function ourServicesAnimations() {
-  ourServicesTitle.style.display = "block";
-  ourServicesItems.forEach(function (item, i) {
-    var ms = (i + 1) * 300;
-    setTimeout(function () {
-      var counter = 0;
-      var opacity = 0;
-      var interval = setInterval(function () {
-        if (opacity < 1) {
-          opacity = opacity + counter / 50;
-          item.style.opacity = opacity;
-          counter++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 50);
-    }, ms);
-  });
-  ourServicesAnimated = true;
-}
-
-function whyChooseUsAnimations() {
-  whyChooseUsTitle.style.opacity = 1;
-  whyChooseUsTitle.classList.add("animate__fadeInLeftBig");
-  setTimeout(function () {
-    whyChooseUsItems.forEach(function (item, i) {
-      var ms = (i + 1) * 300;
-      setTimeout(function () {
-        item.style.opacity = 1;
-        (i + 1) % 2 === 1 ? item.classList.add("animate__fadeInRight") : item.classList.add("animate__fadeInLeft");
-      }, ms);
-    });
-  }, 500);
-  whyChooseUsAnimated = true;
-}
-
-function footerAnimations() {
-  footerTitle.style.opacity = 1;
-  footerTitle.classList.add("animate__slow", "animate__fadeIn");
-  setTimeout(function () {
-    footerItems.forEach(function (item, i) {
-      var ms = (i + 1) * 300;
-      setTimeout(function () {
-        item.style.opacity = 1;
-        item.classList.add("animate__slow", "animate__fadeIn");
-      }, ms);
-    });
-  }, 500);
-  footerAnimated = true;
+  console.log("animationsHandler");
 }
 
 module.exports = {
@@ -199,7 +62,7 @@ module.exports = {
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
- // require('./bootstrap');
+
 
 var screenAdaptations = __webpack_require__(/*! ./screenAdaptations */ "./resources/js/screenAdaptations.js");
 
@@ -222,7 +85,7 @@ window.onload = function () {
 /*!******************************!*\
   !*** ./resources/js/menu.js ***!
   \******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((module) => {
 
 var mobileMenu;
 var mainMenu;
@@ -233,24 +96,15 @@ var header;
 var coverPage;
 var hash;
 
-var currentPage = __webpack_require__(/*! ./page */ "./resources/js/page.js").currentPage();
-
 function init() {
-  mobileMenu = window.screen.width > 1110 ? false : true;
+  mobileMenu = window.screen.width > 960 ? false : true;
   mainMenu = document.querySelector("#mainNavigation > ul");
   logoAndTitle = document.querySelectorAll("#siteIdentity > img, #siteIdentity h2");
   openMenuButton = document.getElementById("openMenu");
   closeMenuButton = document.getElementById("closeMenu");
   header = document.getElementById("header");
   coverPage = document.getElementById("coverPage");
-  hash = window.location.hash; //Margin for the coverPage equal to header height since the header has position:fixed.
-
-  if (currentPage.isDevsPage) {
-    document.querySelector("section.i0").style.marginTop = header.offsetHeight + "px";
-  } else if (currentPage.isHomePage) {
-    coverPage.style.marginTop = header.offsetHeight + "px";
-  } //Only when the mobile menu is applied.
-
+  hash = window.location.hash; //Only when the mobile menu is applied.
 
   if (mobileMenu) {
     mainMenu.style.display = "none";
@@ -404,182 +258,21 @@ module.exports = {
 var currentPage = __webpack_require__(/*! ./page */ "./resources/js/page.js").currentPage();
 
 function init() {
-  if (currentPage.isHomePage) {
-    try {
-      aboutUsSVG();
-      ourServicesSVG();
-      whyChooseUsSVG();
-      footerSVG();
-    } catch (error) {
-      console.warn("This exception can be thrown simply by not being on the home page. In this case ignore it.\n", error);
-    }
-  } else if (currentPage.isDevsPage) {
-    try {
-      devSectionsSVG();
-      footerSVG();
-    } catch (error) {
-      console.warn("This exception can be thrown simply by not being on the devs page. In this case ignore it.\n", error);
-    }
-  }
-}
-/**
- * Resize the SVG triangles and polygon in the "About Us" section according to the width of the screen.
- */
-
-
-function aboutUsSVG() {
-  var svg1 = document.querySelector("#aboutUs svg.i0"); //Yellow Triangle.
-
-  var svg2 = document.querySelector("#aboutUs svg.i1"); //White Polygon.
-
-  var svg3 = document.querySelector("#aboutUs svg.i2"); //White Triangle.
-
-  var polygon1 = svg1.querySelector("polygon"); //Yellow Triangle.
-
-  var polygon2 = svg2.querySelector("polygon"); //White Polygon.
-
-  var polygon3 = svg3.querySelector("polygon"); //White Triangle.
-
-  var width = window.screen.width;
-
-  if (width > 790) {
-    //Yellow Triangle.
-    svg1.setAttribute('width', 600);
-    svg1.setAttribute('height', 300);
-    polygon1.setAttribute('points', '0,0 600,0 300,300'); //White Polygon.
-
-    svg2.setAttribute('width', 900);
-    svg2.setAttribute('height', 500);
-    polygon2.setAttribute('points', '300,0 900,0 900,500 200,500 0,300'); //White Triangle.
-
-    svg3.setAttribute('width', 250);
-    svg3.setAttribute('height', 250);
-    polygon3.setAttribute('points', '0,0 250,250 0,250');
-  } else {
-    //Yellow Triangle.
-    svg1.setAttribute('width', 250);
-    svg1.setAttribute('height', 250);
-    polygon1.setAttribute('points', '50,0 250,0 150,250'); //White Polygon.
-
-    svg2.setAttribute('width', 400);
-    svg2.setAttribute('height', 500);
-    polygon2.setAttribute('points', '100,0 400,0 400,500 100,500 0,250'); //White Triangle.
-
-    svg3.setAttribute('width', 200);
-    svg3.setAttribute('height', 250);
-    polygon3.setAttribute('points', '0,0 100,250 0,250');
-  }
-}
-/**
- * Resize the SVG triangles in the "Our services" section according to the width of the screen.
- */
-
-
-function ourServicesSVG() {
-  var svg1 = document.querySelector("#ourServices svg.i0"); //Black triangle
-
-  var polygon1 = svg1.querySelector("polygon");
-  var svg2 = document.querySelector("#ourServices svg.i1"); //Yellow triangle
-
-  var polygon2 = svg2.querySelector("polygon");
-  var width = window.screen.width;
-  var size;
-
-  if (width > 1100) {
-    size = 300;
-  } else if (width > 850) {
-    size = 250;
-  } else if (width > 400) {
-    size = 200;
-  } else {
-    size = 150;
-  }
-
-  svg1.setAttribute('width', size);
-  svg1.setAttribute('height', size);
-  polygon1.setAttribute('points', "0,0 ".concat(size, ",").concat(size, " 0,").concat(size));
-  svg2.setAttribute('width', size);
-  svg2.setAttribute('height', size);
-  polygon2.setAttribute('points', "0,0 ".concat(size, ",").concat(size, " ").concat(size, ",0"));
-}
-/**
- * Resize the SVG triangle and polygon in the "Why choose us" section according to the width of the screen.
- */
-
-
-function whyChooseUsSVG() {
-  var svg1 = document.querySelector("#whyChooseUs svg.i0"); //Yellow polygon
-
-  var polygon1 = svg1.querySelector("polygon");
-  var svg2 = document.querySelector("#whyChooseUs svg.i1"); //White triangle
-
-  var polygon2 = svg2.querySelector("polygon");
-  var width = window.screen.width;
-  var svg2Size;
-
-  if (width > 700) {
-    svg1.setAttribute('width', 500);
-    svg1.setAttribute('height', 500);
-    polygon1.setAttribute('points', '0,0 100,0 500,350 350,500 0,500');
-    svg2Size = 300;
-  } else {
-    svg1.setAttribute('width', 500);
-    svg1.setAttribute('height', 700);
-    polygon1.setAttribute('points', '0,0 500,650, 500,700 0,700');
-    svg2Size = 250;
-  }
-
-  svg2.setAttribute('width', svg2Size);
-  svg2.setAttribute('height', svg2Size);
-  polygon2.setAttribute('points', "".concat(svg2Size, ",0 ").concat(svg2Size, ",").concat(svg2Size, " 0,").concat(svg2Size));
-}
-/**
- * Resize the SVG triangle in the footer according to the width of the screen.
- */
-
-
-function footerSVG() {
-  var svg = document.querySelector("#footer svg.i0"); //Black triangle
-
-  var polygon1 = svg.querySelector("polygon");
-  var width = window.screen.width;
-  var svgWidth;
-
-  if (width > 550) {
-    svgWidth = 650;
-  } else {
-    svgWidth = 200;
-  }
-
-  svg.setAttribute('width', svgWidth);
-  svg.setAttribute('height', '500');
-  polygon1.setAttribute('points', "".concat(svgWidth, ",0 ").concat(svgWidth, ",500 0,500"));
+  console.log("screenAdaptations");
+  coverPage();
 }
 
-function devSectionsSVG() {
-  var SVGs = document.querySelectorAll("section > svg");
-  var originalSize = 300;
-  var newSize = 250;
-  var width = window.screen.width;
+function coverPage() {
+  var header = document.getElementById("header");
+  var headerHeight = header.offsetHeight;
+  var coverPage = document.getElementById("coverPage");
+  coverPage.style.height = window.screen.height - headerHeight + "px"; //Margin for the coverPage equal to header height since the header has position:fixed.
 
-  if (width > 960) {
-    newSize = 300;
-  } else if (width > 750) {
-    newSize = 250;
-  } else if (width > 450) {
-    newSize = 200;
-  } else {
-    newSize = 150;
+  if (currentPage.isDevsPage) {
+    document.querySelector("section.i0").style.marginTop = headerHeight + "px";
+  } else if (currentPage.isHomePage) {
+    coverPage.style.marginTop = headerHeight + "px";
   }
-
-  SVGs.forEach(function (svg) {
-    svg.setAttribute('width', newSize);
-    svg.setAttribute('height', newSize);
-    var polygon = svg.querySelector("polygon");
-    var points = polygon.getAttribute('points');
-    points = points.replaceAll(originalSize, newSize);
-    polygon.setAttribute('points', points);
-  });
 }
 
 module.exports = {

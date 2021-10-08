@@ -1,4 +1,5 @@
 "use strict";
+// require('./bootstrap');
 const screenAdaptations = require('./screenAdaptations');
 const animationsHandler = require('./animationsHandler');
 const menu = require('./menu');
@@ -10,3 +11,5 @@ window.onload = ()=>{
     menu.init();
     whatsappButton.init();
 };
+
+

@@ -1,0 +1,42 @@
+#hello{
+  background-color: #1D1D1D;
+  height: 9em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-family: var(--fontTitle);
+  padding: 2em 0.5em;
+}
+
+#hello > h2{
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+#hello > p{
+  margin-left: 2.5em;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+@media screen and (max-width: 850px){
+  #hello{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 620px){
+  #hello{
+    min-height: 9em;
+    height: auto;
+  }
+  #hello > h2{
+    font-size: 2em;
+  }
+  #hello > p{
+    margin-left: 1.5em;
+    font-size: 1.4em;
+  }
+}
