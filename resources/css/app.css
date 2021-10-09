@@ -5,9 +5,11 @@
 @import "coverPage.css";
 @import "hello.css";
 @import "services.css";
-
-
 @import "aboutUs.css";
+@import "ourProjects.css";
+@import "workflow.css";
+
+
 @import "whyChooseUs.css";
 @import "footer.css";
 @import "animate.min.css";
@@ -28,6 +30,7 @@
 html,body{
     margin:0;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 .imageButton{
     padding:0;
@@ -64,8 +67,8 @@ html,body{
     border-radius: 1em;
     border-bottom-right-radius: .1em;
     background: #e5e5e5;
-    font-family: var(--font2);
-    color: var(--color5);
+    font-family: var(--fontText);
+    color: rgb(27, 27, 27);
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,.25);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,.25);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,.25);

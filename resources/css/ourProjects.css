@@ -1,0 +1,85 @@
+#ourProjects{
+  background-color: #1D1D1D;
+  font-size: 16px;
+  padding: 3em 0;
+}
+
+#ourProjectsTitle{
+  color: var(--white);
+  font-family: var(--fontTitle);
+  margin-top:0;
+  font-size: 2.75em;
+  text-align: center;
+}
+
+.projects{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects .project{
+  width: 33.33%;
+  height: 15em;
+  position: relative;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.projects .project::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(128, 89, 89, 0) 0%, rgba(67, 67, 67, 0) 81.25%, rgba(0, 0, 0, 0.71) 100%);
+}
+.projects .project:hover,
+.projects .project:active{
+  opacity: 0.5;
+  transition: 0.25s;
+}
+
+.projects .project img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.projects .project h4{
+  color: var(--white);
+  font-family: var(--fontTitle);
+  font-size: 0.93em;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px #0E0E0E;
+  position: absolute;
+  left: 4%;
+  bottom: -1%;
+  z-index: 1;
+}
+@media screen and (max-width: 960px){
+  #ourProjects{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 800px){
+  #ourProjectsTitle{
+    font-size: 2em;
+  }
+  .projects{
+    flex-flow: row wrap;
+  }
+  .projects .project{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 440px){
+  .projects .project{
+    width: 100%;
+    height: 18em;
+  }
+}

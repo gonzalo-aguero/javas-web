@@ -26,11 +26,10 @@
 }
 
 .service{
-  /*   opacity: 0; */
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
-  width: 22.5em;
+  flex-basis: 22.5em;
   height: 18.75em;
   border: 0.1em var(--lightBlue) solid;
   padding: 1.87em;
@@ -77,15 +76,26 @@
   color: #212121;
   transition: 0.1s;
 }
-@media screen and (max-width: 850px){
+
+.services > a {
+  display: none;
+}
+
+@media screen and (max-width: 420px){
   #services{
-    font-size: 12px;
+    font-size: 14px;
     padding: 2em;
   }
-}
-@media screen and (max-width: 620px){
- .service{
-    min-height: 18.75em;
+  .service{
+    width: 100%;
     height: auto;
+  }
+}
+@media screen and (max-width: 320px){
+  #services{
+    font-size: 12px;
+  }
+  #servicesTitle{
+    font-size: 2em;
   }
 }

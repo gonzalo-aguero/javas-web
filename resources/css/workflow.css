@@ -1,0 +1,105 @@
+#workflow{
+  background-color: #212121;
+  font-size: 16px;
+  padding: 3em;
+  display: flex;
+  flex-flow: column;
+  align-items:center;
+}
+
+#workflowTitle{
+  color: var(--white);
+  font-family: var(--fontTitle);
+  margin-top:0;
+  font-size: 2.75em;
+  text-align: center;
+}
+
+#workflow ul {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items:center;
+  justify-content:center;
+  gap: 2em;
+  padding:0;
+}
+
+
+#workflow ul li{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  gap: 1.5em;
+  width: 58.75em;
+  height: 9.37em;
+}
+#workflow ul li.i0,
+#workflow ul li.i2{
+  text-align:right;
+}
+#workflow ul li.i1,
+#workflow ul li.i3{
+  justify-content: flex-end;
+}
+#workflow ul li .text{
+  width: 24.06em;
+  height: 5.81em;
+}
+#workflow ul li h3{
+  color: var(--lightBlue);
+  font-family: var(--fontTitle);
+  font-weight: 600;
+  font-size: 1.25em;
+  margin-top: 0;
+  margin-bottom: .35em;
+}
+
+#workflow ul li p{
+  color: var(--white);
+  font-family: var(--fontText);
+  font-weight: 200;
+  font-size: 1.05em;
+  margin-top: 0;
+}
+
+#workflow ul li img{
+  width: 7.81em;
+  height: 7.81em;
+}
+@media screen and (max-width: 980px){
+  #workflow ul li{
+    width: 45em;
+    height: 9.37em;
+  }
+  #workflow ul li .text{
+    width: 17.25em;
+    height: 8.62em;
+  }
+}
+@media screen and (max-width: 760px){
+  #workflowTitle{
+    font-size: 2em;
+  }
+  #workflow ul li{
+    justify-content: center !important;
+  }
+}
+@media screen and (max-width: 480px){
+  #workflow{
+    font-size: 14px;
+  }
+  #workflow ul li{
+    flex-flow: column;
+    align-items: center;
+    gap: 1.5em;
+    width: 58.75em;
+    min-height: 9.37em;
+    height: auto;
+    text-align: center !important;
+  }
+  #workflow ul li.i0,
+  #workflow ul li.i2{
+    flex-flow: column-reverse;
+  }
+}
