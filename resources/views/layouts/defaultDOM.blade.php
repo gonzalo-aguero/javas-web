@@ -74,7 +74,11 @@
             <h3>Correo electrónico</h3>
             <p class="animate__animated"><a href="mailto:gonzaloaguerodev@gmail.com">gonzaloaguerodev@gmail.com</a></p>
             <h3>Número de teléfono</h3>
-            <p class="animate__animated"><a href="tel:+54 9 343 425-8605">+54 9 343 425-8605</a></p>
+            <p class="animate__animated">
+                <a href="https://api.whatsapp.com/send?phone=5493434258605&text=Hola!%20Quisiera%20realizar%20una%20consulta.%F0%9F%98%81">+54 9 343 425-8605</a>
+                <br>
+                <a href="https://api.whatsapp.com/send?phone=5493435083266&text=Hola!%20Quisiera%20realizar%20una%20consulta.%F0%9F%98%81">+54 9 343 508-3266</a>
+            </p>
         </div>
     </footer>
     @if (isset($scripts))

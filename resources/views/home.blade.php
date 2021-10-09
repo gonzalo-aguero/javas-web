@@ -160,4 +160,66 @@
             </li>
         </ul>
     </section>
+    <section id="contact">
+        <h2 class="animate__animated animate__fadeIn" id="workflowTitle">CONTACTO</h2>
+        <p>Contáctanos sin compromiso. En menos de 24 horas te enviaremos nuestro feedback.</p>
+        <div id="contactOptions">
+            <div id="othersContactOptions">
+                <h3>¿Hablamos?</h3>
+                <p>Damos servicios a todo tipo de sectores:<br>
+                    Startups, Clientes finales, Agencias, Pymes, Particulares, Autónomos, etc.
+                </p>
+                <span><strong>Email: </strong><a href="mailto:javaswebonline@gmail.com">javaswebonline@gmail.com</a></span>
+                <span><strong>Instagram: </strong><a href="https://www.instagram.com/javas_web/">@javas_web</a></span>
+                <span><strong>WhatsApp: </strong>
+                    <a class="whatsapp" href="https://api.whatsapp.com/send?phone=5493434258605&text=Hola!%20Quisiera%20realizar%20una%20consulta.%F0%9F%98%81">+54 9 343 425-8605</a>
+                    <a class="whatsapp" href="https://api.whatsapp.com/send?phone=5493435083266&text=Hola!%20Quisiera%20realizar%20una%20consulta.%F0%9F%98%81">+54 9 343 508-3266</a>
+                </span>
+            </div>
+            <form action="{{route('mail.contact')}}" method="post" id="contactForm">
+                @method('POST')
+                @csrf
+
+                <select name="service" id="service">
+                    <option value="" selected>Seleccionar motivo</option>
+                    <option value="Sitio web">Sitio web</option>
+                    <option value="Tienda online">Tienda online (ecommerce)</option>
+                    <option value="Apps">Aplicaciones</option>
+                    <option value="Soy desarrollador">Servicio para desarrolladores</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                @error('service')
+                    <small>{{$message}}</small>
+                @enderror
+                <div>
+                    <input type="text" name="name" id="name" placeholder="Nombre" value="{{old('name')}}">
+                    @error('name')
+                        <small>{{$message}}</small>
+                    @enderror
+                    <input type="text" name="company" id="company" placeholder="Empresa" value="{{old('company')}}">
+                    @error('company')
+                        <small>{{$message}}</small>
+                    @enderror
+                    <input type="email" name="email" id="email" placeholder="Correo electrónico" value="{{old('email')}}">
+                    @error('email')
+                        <small>{{$message}}</small>
+                    @enderror
+                    <input type="tel" name="telephone" id="telephone" placeholder="Teléfono" value="{{old('telephone')}}">
+                    @error('telephone')
+                        <small>{{$message}}</small>
+                    @enderror
+                </div>
+                <textarea name="message" id="message" placeholder="Mensaje">{{old('message')}}</textarea>
+                @error('message')
+                    <small>{{$message}}</small>
+                @enderror
+                <input type="submit" value="Enviar">
+                @if (session('info'))
+                    <script>
+                        setTimeout(()=> alert("{{session('info')}}"), 1200);
+                    </script>
+                @endif
+            </form>
+        </div>
+    </section>
 @endsection

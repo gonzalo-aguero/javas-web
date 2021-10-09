@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\DevsController;
+use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,7 @@ use App\Http\Controllers\DevsController;
 Route::get('/', HomeController::class)->name('home');
 Route::get('devs', [DevsController::class, 'index'])->name('devs');
 Route::post('devs/contact', [DevsController::class, 'contact'])->name('devs.contact');
+Route::post('contact/mail', [MailController::class, 'contact'])->name('mail.contact');
 
 // Laravel practices
 Route::get('services', [ServicesController::class, 'index'])->name('services.index');

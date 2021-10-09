@@ -147,9 +147,12 @@ return [
     */
 
     'attributes' => [
+        'service' => 'Motivo',
         'name' => 'Nombre',
+        'company' => 'Empresa',
         'email' => 'Correo electrónico',
-        'telephone' => 'Teléfono'
+        'telephone' => 'Teléfono',
+        'message' => 'Mensaje'
     ],
 
 ];
