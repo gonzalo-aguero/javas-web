@@ -9,6 +9,7 @@
 }
 
 #aboutUsTitle{
+    opacity: 0;
   color: var(--white);
   font-family: var(--fontTitle);
   margin-top:0;
@@ -25,6 +26,7 @@
 }
 
 #aboutUs .blocks .block{
+    opacity: 0;
   flex-basis: 22.5em;
   height: 18.75em;
   border: 0.1em var(--lightBlue) solid;
@@ -61,6 +63,7 @@
 }
 
 #technologies h3{
+    opacity: 0;
   color: var(--white);
   font-family: var(--fontTitle);
   font-weight: 400;
@@ -76,6 +79,9 @@
   align-items: center;
   gap: 1.25em;
   padding: 0;
+}
+#technologies ul li{
+    opacity: 0;
 }
 #technologies ul li img{
     width: 5em;

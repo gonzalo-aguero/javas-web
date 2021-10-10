@@ -8,6 +8,7 @@
 }
 
 #workflowTitle{
+    opacity: 0;
   color: var(--white);
   font-family: var(--fontTitle);
   margin-top:0;
@@ -21,12 +22,13 @@
   flex-flow: column;
   align-items:center;
   justify-content:center;
-  gap: 2em;
+  gap: 3em;
   padding:0;
 }
 
 
 #workflow ul li{
+    opacity: 0;
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
@@ -65,7 +67,6 @@
 
 #workflow ul li img{
   width: 7.81em;
-  height: 7.81em;
 }
 @media screen and (max-width: 980px){
   #workflow ul li{

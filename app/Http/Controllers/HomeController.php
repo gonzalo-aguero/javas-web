@@ -12,6 +12,7 @@ class HomeController extends Controller
             asset('css/app.css')
         ];
         $scripts = [
+            asset('js/particles.min.js'),
             asset('js/app.js')
         ];
         $isHomePage = true;

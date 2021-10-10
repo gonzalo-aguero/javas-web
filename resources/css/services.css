@@ -9,7 +9,7 @@
 }
 
 #servicesTitle{
-  /*     display: none; */
+    opacity: 0;
   color: var(--white);
   font-family: var(--fontTitle);
   margin-top:0;
@@ -26,13 +26,14 @@
 }
 
 .service{
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  flex-basis: 22.5em;
-  height: 18.75em;
-  border: 0.1em var(--lightBlue) solid;
-  padding: 1.87em;
+    opacity: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    flex-basis: 22.5em;
+    height: 18.75em;
+    border: 0.1em var(--lightBlue) solid;
+    padding: 1.87em;
 }
 
 .service img{
@@ -58,6 +59,7 @@
 }
 
 .service .info{
+    display: none;
   color: var(--white);
   font-family: var(--fontTitle);
   text-align: center;

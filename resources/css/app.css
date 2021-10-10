@@ -9,8 +9,6 @@
 @import "ourProjects.css";
 @import "workflow.css";
 @import "contact.css";
-
-@import "whyChooseUs.css";
 @import "footer.css";
 @import "animate.min.css";
 :root{
@@ -59,7 +57,7 @@ html,body{
 #WhatsAppButton > .message{
     display: none;
     position: absolute;
-    width: 12em;
+    width: 13em;
     right: 2.75em;
     top: -1.75em;
     text-align: center;

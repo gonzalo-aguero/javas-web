@@ -26,7 +26,6 @@
 <body>
     <header id="header">
         <div class="left animate__animated animate__fadeIn animate__slow" id="siteIdentity">
-            {{-- <img src="{{asset('img/favicon.png')}}" alt="Logo JavasWeb"> --}}
             <div>
                 <h2 class="i0">JAVAS</h2>
                 <h2 class="i1">WEB</h2>
@@ -41,19 +40,19 @@
             </button>
             <ul class="animate__animated animate__fadeInDown animate__delay-2s">
                 @if (isset($isHomePage) && $isHomePage === true)
-                    <li><a href="#" class="current">Home<a></li>
+                    <li><a href="#">Home<a></li>
                     <li><a href="#_aboutUs">Nosotros<a></li>
-                    <li><a href="#_ourServices">Servicios<a></li>
-                    <li><a href="#_whyChooseUs">Trabajos<a></li>
-                    <li><a href="#_footer">Contacto<a></li>
-                    <li><a href="{{route('devs')}}">Desarrollador<a></li>
+                    <li><a href="#_services">Servicios<a></li>
+                    <li><a href="#_projects">Trabajos<a></li>
+                    <li><a href="#_contact">Contacto<a></li>
+                    {{-- <li><a href="{{route('devs')}}">Desarrollador<a></li> --}}
                 @else
-                    <li><a href="{{route('home')}}#" class="current">Home<a></li>
+                    <li><a href="{{route('home')}}#">Home<a></li>
                     <li><a href="{{route('home')}}#_aboutUs">Nosotros<a></li>
-                    <li><a href="{{route('home')}}#_ourServices">Servicios<a></li>
-                    <li><a href="{{route('home')}}#_whyChooseUs">Trabajos<a></li>
-                    <li><a href="{{route('home')}}#_footer">Contacto<a></li>
-                    <li><a href="{{route('devs')}}">Desarrollador<a></li>
+                    <li><a href="{{route('home')}}#_services">Servicios<a></li>
+                    <li><a href="{{route('home')}}#_projects">Trabajos<a></li>
+                    <li><a href="{{route('home')}}#_contact">Contacto<a></li>
+                    {{-- <li><a href="{{route('devs')}}">Desarrollador<a></li> --}}
                 @endif
             </ul>
         </nav>
@@ -62,24 +61,9 @@
     @yield('content')
 
     <footer id="footer">
-        <img src="{{asset('img/design/footer.webp')}}">
-        <!-- Black triangle -->
-        <svg width="650" height="500" class="i0">
-            <polygon points="650,0 650,500 0,500" stroke="none" stroke-width="0" fill="var(--color6)"></polygon>
-        </svg>
-        <div class="text">
-            <h2 class="animate__animated">Ponete en contacto</h2>
-            <h3>Dirección postal</h3>
-            <p class="animate__animated"><a href="https://goo.gl/maps/GTc4ZU6FGksCfgcx7" target="_blank">Paraná, Entre Ríos, Argentina</a></p>
-            <h3>Correo electrónico</h3>
-            <p class="animate__animated"><a href="mailto:gonzaloaguerodev@gmail.com">gonzaloaguerodev@gmail.com</a></p>
-            <h3>Número de teléfono</h3>
-            <p class="animate__animated">
-                <a href="https://api.whatsapp.com/send?phone=5493434258605&text=Hola!%20Quisiera%20realizar%20una%20consulta.%F0%9F%98%81">+54 9 343 425-8605</a>
-                <br>
-                <a href="https://api.whatsapp.com/send?phone=5493435083266&text=Hola!%20Quisiera%20realizar%20una%20consulta.%F0%9F%98%81">+54 9 343 508-3266</a>
-            </p>
-        </div>
+        <img src="{{asset('img/favicon.png')}}" alt="Logo Javas Web">
+        <h2>JAVAS WEB</h2>
+        <span>© JAVAS WEB 2021</span>
     </footer>
     @if (isset($scripts))
         @foreach ($scripts as $src)

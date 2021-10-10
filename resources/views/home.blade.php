@@ -9,14 +9,15 @@
             background-size: cover;
             background-position: center center;
         ">
-        <div class="text animate__animated animate__fadeInLeftBig" id="coverPageText">
-            <img src="{{asset('img/whiteFavicon.png')}}" alt="Logo Javas Web">
-            <h1>[ Desarrollo Web ]</h1>
-            <p class="animate__animated animate__fadeIn animate__delay-1s">
+        <div id="particles-js"></div>
+        <div class="text" id="coverPageText">
+            <img class="animate__animated" src="{{asset('img/whiteFavicon.png')}}" alt="Logo Javas Web">
+            <h1 class="animate__animated">[ Desarrollo Web ]</h1>
+            <p class="animate__animated">
                 Tenés un proyecto? Tu empresa está en crecimiento? Necesitás un sitio web?
                 No lo dudes! <strong>Presupuesto sin cargo!</strong>
             </p>
-            <span id="startButton">COMENZAR</span>
+            <span class="animate__animated" id="startButton">COMENZAR</span>
         </div>
     </section>
     <section id="hello">
@@ -24,7 +25,7 @@
         <p>Somos Javas Web: Desarrollo de software a medida.</p>
     </section>
     <section id="services">
-        <h2 class="animate__animated animate__fadeIn" id="servicesTitle">SERVICIOS</h2>
+        <h2 class="animate__animated" id="servicesTitle">SERVICIOS</h2>
         <div class="services">
             <div class="service i0 animate__animated">
                 <img class="serviceIcon" src="{{asset('img/design/services/software a medida.svg')}}" alt="Software a medida">
@@ -70,7 +71,7 @@
         </div>
     </section>
     <section id="aboutUs">
-        <h2 class="animate__animated animate__fadeIn" id="aboutUsTitle">NOSOTROS</h2>
+        <h2 class="animate__animated" id="aboutUsTitle">NOSOTROS</h2>
         <div class="blocks">
             <div class="block i0 animate__animated">
                 <h3>¿Quiénes somos?</h3>
@@ -91,27 +92,27 @@
             </div>
         </div>
         <div id="technologies">
-            <h3>TECNOLOGÍAS</h3>
+            <h3 class="animate__animated">TECNOLOGÍAS</h3>
             <ul>
-                <li><img src="{{asset('img/icons/technologies/html5.svg')}}" title="HTML5" alt="HTML5"></li>
-                <li><img src="{{asset('img/icons/technologies/css3.svg')}}" title="CSS3"  alt="CSS3"></li>
-                <li><img src="{{asset('img/icons/technologies/js.svg')}}" title="JavaScript"  alt="JavaScript"></li>
-                <li><img src="{{asset('img/icons/technologies/PHP.svg')}}" title="PHP"  alt="PHP"></li>
-                <li><img src="{{asset('img/icons/technologies/MySQL.svg')}}" title="MySQL"  alt="MySQL"></li>
-                <li><img src="{{asset('img/icons/technologies/reactNative.svg')}}" title="React Native"  alt="React Native"></li>
-                <li><img src="{{asset('img/icons/technologies/nodeJS.svg')}}" title="Node JS"  alt="Node JS"></li>
-                <li><img src="{{asset('img/icons/technologies/jquery.svg')}}" title="JQuery"  alt="JQuery"></li>
-                <li><img src="{{asset('img/icons/technologies/webPack.svg')}}" title="Web Pack"  alt="Web Pack"></li>
-                <li><img src="{{asset('img/icons/technologies/wordpress.svg')}}" title="Wordpress"  alt="Wordpress"></li>
-                <li><img src="{{asset('img/icons/technologies/java.svg')}}" title="Java"  alt="Java"></li>
-                <li><img src="{{asset('img/icons/technologies/firebase.svg')}}" title="Firebase"  alt="Firebase"></li>
-                <li><img src="{{asset('img/icons/technologies/heroku.svg')}}" title="Heroku"  alt="Heroku"></li>
-                <li><img src="{{asset('img/icons/technologies/github.svg')}}" title="Github"  alt="Github"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/html5.svg')}}" title="HTML5" alt="HTML5"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/css3.svg')}}" title="CSS3"  alt="CSS3"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/js.svg')}}" title="JavaScript"  alt="JavaScript"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/PHP.svg')}}" title="PHP"  alt="PHP"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/MySQL.svg')}}" title="MySQL"  alt="MySQL"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/reactNative.svg')}}" title="React Native"  alt="React Native"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/nodeJS.svg')}}" title="Node JS"  alt="Node JS"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/jquery.svg')}}" title="JQuery"  alt="JQuery"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/webPack.svg')}}" title="Web Pack"  alt="Web Pack"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/wordpress.svg')}}" title="Wordpress"  alt="Wordpress"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/java.svg')}}" title="Java"  alt="Java"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/firebase.svg')}}" title="Firebase"  alt="Firebase"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/heroku.svg')}}" title="Heroku"  alt="Heroku"></li>
+                <li class="animate__animated"><img src="{{asset('img/icons/technologies/github.svg')}}" title="Github"  alt="Github"></li>
             </ul>
         </div>
     </section>
     <section id="ourProjects">
-        <h2 class="animate__animated animate__fadeIn" id="ourProjectsTitle">ALGUNOS DE NUESTROS PROYECTOS</h2>
+        <h2 class="animate__animated" id="ourProjectsTitle">ALGUNOS DE NUESTROS PROYECTOS</h2>
         <div class="projects">
             <div class="project i0 animate__animated">
                 <img src="{{asset('img/projects/project1.jpg')}}" alt="">
@@ -128,30 +129,30 @@
         </div>
     </section>
     <section id="workflow">
-        <h2 class="animate__animated animate__fadeIn" id="workflowTitle">NUESTRO WORKFLOW</h2>
+        <h2 class="animate__animated" id="workflowTitle">NUESTRO WORKFLOW</h2>
         <ul>
-            <li class="i0">
+            <li class="i0 animate__animated">
                 <div class="text">
                     <h3>INVESTIGACIÓN</h3>
                     <p>Recopilar y analizar todos los datos sobre las características del negocio para nuestro cliente.</p>
                 </div>
                 <img src="{{asset('img/design/workflow/1.svg')}}" alt="INVESTIGACIÓN">
             </li>
-            <li class="i1">
+            <li class="i1 animate__animated">
                 <img src="{{asset('img/design/workflow/2.svg')}}" alt="DISEÑO Y DESARROLLO">
                 <div class="text">
                     <h3>DISEÑO Y DESARROLLO</h3>
                     <p>Planificación, wireframing, prototipado, visualización, arquitectura y codificación.</p>
                 </div>
             </li>
-            <li class="i2">
+            <li class="i2 animate__animated">
                 <div class="text">
                     <h3>REFINAMIENTO</h3>
                     <p>Control de la calidad, testing, aspectos técnicos y mejoras del proyecto final.</p>
                 </div>
                 <img src="{{asset('img/design/workflow/3.svg')}}" alt="REFINAMIENTO">
             </li>
-            <li class="i3">
+            <li class="i3 animate__animated">
                 <img src="{{asset('img/design/workflow/4.svg')}}" alt="FINALIZACIÓN">
                 <div class="text">
                     <h3>FINALIZACIÓN</h3>
@@ -161,8 +162,8 @@
         </ul>
     </section>
     <section id="contact">
-        <h2 class="animate__animated animate__fadeIn" id="workflowTitle">CONTACTO</h2>
-        <p>Contáctanos sin compromiso. En menos de 24 horas te enviaremos nuestro feedback.</p>
+        <h2 class="animate__animated" id="contactTitle">CONTACTO</h2>
+        <p class="animate__animated">Contáctanos sin compromiso. En menos de 24 horas te enviaremos nuestro feedback.</p>
         <div id="contactOptions">
             <div id="othersContactOptions">
                 <h3>¿Hablamos?</h3>

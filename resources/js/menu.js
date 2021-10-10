@@ -76,23 +76,28 @@ function scrollToSection() {
     let elementY;
 
     switch (hash) {
+        case '#_hello':
+            element = document.getElementById('hello');
+            elementY = element.offsetTop;
+            y = elementY - 100;
+            break;
         case "#_aboutUs":
             element = document.getElementById("aboutUs");
             elementY = element.offsetTop;
             y = elementY - 100;
             break;
-        case "#_ourServices":
-            element = document.getElementById("ourServices");
+        case "#_services":
+            element = document.getElementById("services");
             elementY = element.offsetTop;
             y = elementY - 100;
             break;
-        case "#_whyChooseUs":
-            element = document.getElementById("whyChooseUs");
+        case "#_projects":
+            element = document.getElementById("ourProjects");
             elementY = element.offsetTop;
             y = elementY - 100;
             break;
-        case "#_footer":
-            element = document.getElementById("footer");
+        case "#_contact":
+            element = document.getElementById("contact");
             elementY = element.offsetTop;
             y = elementY - 100;
             break;
