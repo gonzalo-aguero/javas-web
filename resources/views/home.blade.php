@@ -115,16 +115,16 @@
         <h2 class="animate__animated" id="ourProjectsTitle">ALGUNOS DE NUESTROS PROYECTOS</h2>
         <div class="projects">
             <div class="project i0 animate__animated">
-                <img src="{{asset('img/projects/project1.jpg')}}" alt="">
-                <h4>APP: DISEÑO + DESARROLLO</h4>
-            </div>
-            <div class="project i1 animate__animated">
-                <img src="{{asset('img/projects/project2.jpg')}}" alt="">
+                <img src="{{asset('img/projects/BSK Elevadores.jpg')}}" alt="BSK Elevadores">
                 <h4>SITIO WEB: DISEÑO + DESARROLLO</h4>
             </div>
+            <div class="project i1 animate__animated">
+                <img src="{{asset('img/projects/Anubis Insumos.jpg')}}" alt="Anubis Insumos">
+                <h4>TIENDA ONLINE: DESARROLLO</h4>
+            </div>
             <div class="project i2 animate__animated">
-                <img src="{{asset('img/projects/project3.jpg')}}" alt="">
-                <h4>APP: DISEÑO + DESARROLLO</h4>
+                <img src="{{asset('img/projects/BGA Transporte.jpg')}}" alt="BGA Transporte">
+                <h4>SITIO WEB: DISEÑO + DESARROLLO</h4>
             </div>
         </div>
     </section>
