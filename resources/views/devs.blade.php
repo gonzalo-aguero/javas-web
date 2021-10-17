@@ -1,17 +1,29 @@
 @section('url', 'https://javasweb.com/devs')
 @section('title', 'Desarrolladores')
+@section('description', 'Somos JavasWeb, y te ofrecemos la posibilidad de conseguir clientes sin siquiera mover un dedo!')
+@section('keywords', 'Desarrollo web,diseño web,agencia desarrollo web,web developer,software,desarrollo de software,Javas web,javas,javas web,developers,desarrolladores,clientes para desarrolladores,freelancer,freelancers')
 @extends('layouts.defaultDOM')
 @section('content')
+    <section id="coverPage" style="
+            background: linear-gradient(270deg, rgba(14, 70, 136, 0.6) 0%, rgba(254, 165, 1, 0.6) 100%),
+            url({{asset('img/design/coverpage.jpg')}});
+            background-size: cover;
+            background-position: center center;
+        ">
+        <div id="particles-js"></div>
+        <div class="text" id="coverPageText">
+            <img class="animate__animated" src="{{asset('img/whiteFavicon.png')}}" alt="Logo Javas Web">
+            <h1 class="animate__animated">[ Desarrolladores ]</h1>
+            <p class="animate__animated">
+                Sos desarrollador freelancer? Entonces puede que te interese nuestra propuesta.
+            </p>
+            <span class="animate__animated" id="startButton">COMENZAR</span>
+        </div>
+    </section>
     <section class="i0">
         <h1>Desarrolladores</h1>
         <h2>Servicio para desarrolladores</h2>
         <p>JavasWeb ofrece a los desarrolladores la posibilidad de trabajar con nosotros.</p>
-        <svg width="300" height="300" class="i0">
-            <polygon points="0,0 300,0 300,300" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
-        </svg>
-        <svg width="300" height="300" class="i1">
-            <polygon points="0,0 300,300 0,300" stroke="none" stroke-width="0" fill="var(--color6)"></polygon>
-        </svg>
     </section>
     <section class="i1">
         <h2>¿En qué consiste?</h2>
@@ -20,47 +32,5 @@
         </p>
         <p>El desarrollador podrá crear un presupuesto con el monto deseado y trendrá trato
             directo con el cliente.</p>
-        <svg width="300" height="300" class="i0">
-            <polygon points="0,0 300,0 0,300" stroke="none" stroke-width="0" fill="var(--color6)"></polygon>
-        </svg>
-        <svg width="300" height="300" class="i1">
-            <polygon points="300,0 300,300 0,300" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
-        </svg>
-    </section>
-    <section class="i2">
-        <h2>Contacto</h2>
-        <p>Para más información contactate con nosotros a través el siguiente formulario o cualquiera de los otros medios.</p>
-        <form action="{{route('devs.contact')}}" method="post" id="contactForm">
-            @method('POST')
-            @csrf
-            <input type="text" name="name" id="name" placeholder="Nombre completo" value="{{old('name')}}">
-            @error('name')
-                <small>{{$message}}</small>
-            @enderror
-            <input type="email" name="email" id="email" placeholder="Correo electrónico" value="{{old('email')}}">
-            @error('email')
-                <small>{{$message}}</small>
-            @enderror
-            <input type="tel" name="telephone" id="telephone" placeholder="Teléfono" value="{{old('telephone')}}">
-            @error('telephone')
-                <small>{{$message}}</small>
-            @enderror
-            <input type="text" name="message" id="message" placeholder="Mensaje" value="{{old('message')}}">
-            @error('message')
-                <small>{{$message}}</small>
-            @enderror
-            <input type="submit" value="Enviar">
-            @if (session('info'))
-                <script>
-                    setTimeout(()=> alert("{{session('info')}}"), 1200);
-                </script>
-            @endif
-        </form>
-        <svg width="300" height="300" class="i0">
-            <polygon points="0,0 300,0 300,300" stroke="none" stroke-width="0" fill="var(--color4)"></polygon>
-        </svg>
-        <svg width="300" height="300" class="i1">
-            <polygon points="0,0 300,300 0,300" stroke="none" stroke-width="0" fill="var(--color6)"></polygon>
-        </svg>
     </section>
 @endsection

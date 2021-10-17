@@ -8,20 +8,20 @@
     <meta name="robots" content="index,follow"/>
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0"/>
-    <meta name="keywords" content="desarrollo web,web,www,diseño web,diseño,agencia desarrollo web,web developer,software,desarrollo de software"/>
-    <meta name="description" content="Somos JavasWeb, una consultora especializada en el desarrollo web.
-        Buscamos ofrecer a nuestros clientes el mejor servicio, pensando siempre en la mejor calidad a cambio del mejor precio."/>
+    <meta name="keywords" content="@yield('keywords')"/>
+    <meta name="description" content="@yield('description')"/>
     <meta name="author" content="gonzaloaguerodev@gmail.com" />
     <meta name="copyright" content="Javas Web" />
     <link rel="canonical" href="@yield('url')"/>
 
-    <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}" />
+    <link rel="icon" type="image/png" href="{{asset('favicon.ico')}}" />
     <title>@yield('title')</title>
     @if (isset($styleSheets))
         @foreach ($styleSheets as $href)
             <link rel="stylesheet" href="{{$href}}">
         @endforeach
     @endif
+    <link rel="stylesheet" href="{{asset('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')}}">
 </head>
 <body>
     <header id="header">
@@ -45,14 +45,14 @@
                     <li><a href="#_services">Servicios<a></li>
                     <li><a href="#_projects">Trabajos<a></li>
                     <li><a href="#_contact">Contacto<a></li>
-                    {{-- <li><a href="{{route('devs')}}">Desarrollador<a></li> --}}
+                    <li><a href="{{route('devs')}}">Desarrollador<a></li>
                 @else
                     <li><a href="{{route('home')}}#">Home<a></li>
                     <li><a href="{{route('home')}}#_aboutUs">Nosotros<a></li>
                     <li><a href="{{route('home')}}#_services">Servicios<a></li>
                     <li><a href="{{route('home')}}#_projects">Trabajos<a></li>
                     <li><a href="{{route('home')}}#_contact">Contacto<a></li>
-                    {{-- <li><a href="{{route('devs')}}">Desarrollador<a></li> --}}
+                    <li><a href="{{route('devs')}}">Desarrollador<a></li>
                 @endif
             </ul>
         </nav>

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ServicesController;
+// use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\DevsController;
 use App\Http\Controllers\MailController;
 /*
@@ -17,16 +17,15 @@ use App\Http\Controllers\MailController;
 */
 Route::get('/', HomeController::class)->name('home');
 Route::get('devs', [DevsController::class, 'index'])->name('devs');
-Route::post('devs/contact', [DevsController::class, 'contact'])->name('devs.contact');
 Route::post('contact/mail', [MailController::class, 'contact'])->name('mail.contact');
 
 // Laravel practices
-Route::get('services', [ServicesController::class, 'index'])->name('services.index');
-Route::get('services/create', [ServicesController::class, 'createForm'])->name('services.createForm');
-Route::get('services/{service}', [ServicesController::class, 'show'])->name('services.show');
-Route::post('services/create', [ServicesController::class, 'create'])->name('services.create');
-Route::get('services/{service}/edit', [ServicesController::class, 'editForm'])->name('services.editForm');
-Route::put('services/{service}/edit', [ServicesController::class, 'edit'])->name('services.edit');
+// Route::get('services', [ServicesController::class, 'index'])->name('services.index');
+// Route::get('services/create', [ServicesController::class, 'createForm'])->name('services.createForm');
+// Route::get('services/{service}', [ServicesController::class, 'show'])->name('services.show');
+// Route::post('services/create', [ServicesController::class, 'create'])->name('services.create');
+// Route::get('services/{service}/edit', [ServicesController::class, 'editForm'])->name('services.editForm');
+// Route::put('services/{service}/edit', [ServicesController::class, 'edit'])->name('services.edit');
 
 
 

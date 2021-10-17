@@ -76,10 +76,17 @@ function init(){
         contact = document.getElementById('contact');
         contact_title = document.getElementById('contactTitle');
         contact_text = document.querySelector('#contact > p');
+        coverPageAnim();
     }else if(currentPage.isDevsPage){
-
+        coverPageAnimated = false;
+        coverPage = document.getElementById("coverPage");
+        coverPage_logo = document.querySelector('#coverPageText > img');
+        coverPage_title = document.querySelector('#coverPageText > h1');
+        coverPage_text = document.querySelector('#coverPageText > p');
+        coverPage_startButton = document.getElementById('startButton');
+        coverPage_startButton.addEventListener('click', start);
+        coverPageAnim();
     }
-    coverPageAnim();
     window.addEventListener("scroll", scrollEventsHandler);
 }
 function scrollEventsHandler() {
@@ -104,14 +111,16 @@ function scrollEventsHandler() {
                 contactAnim();
             }
         } catch (error) {
-            console.warn(warnMsg, error);
+            console.warn(error);
         }
     }else if(currentPage.isDevsPage){
         //Scroll events in the devs page.
         try {
-            //empty
+            if( !coverPageAnimated && y >= (coverPage.offsetTop - anticipation)){
+                coverPageAnim();
+            }
         } catch (error) {
-            console.warn("This exception can be thrown simply by not being on the devs page. In this case ignore it.\n", error);
+            console.warn(error);
         }
     }else{
         console.warn("no animations");

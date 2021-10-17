@@ -1,6 +1,8 @@
 @section('url', 'https://javasweb.com/')
 @section('title', 'JAVAS WEB')
-@section('isHomePage', true)
+@section('description', 'Somos JavasWeb, una consultora especializada en el desarrollo web.
+Buscamos ofrecer a nuestros clientes el mejor servicio, pensando siempre en la mejor calidad a cambio del mejor precio.')
+@section('keywords', 'Desarrollo web,web,www,diseño web,diseño,agencia desarrollo web,web developer,software,desarrollo de software,Javas web,javas,javas web')
 @extends('layouts.defaultDOM')
 @section('content')
     <section id="coverPage" style="

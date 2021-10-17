@@ -13,10 +13,6 @@ require_once __DIR__ . '/../../../vendor/sendinblue/api-v3-sdk/lib/Api/Transacti
 require_once __DIR__ . '/../../../vendor/sendinblue/api-v3-sdk/lib/Model/SendSmtpEmail.php';
 require_once __DIR__ . '/../../../vendor/guzzlehttp/guzzle/src/Client.php';
 
-// use SendInBlue\Client\Configuration;
-// use SendInBlue\Client\Api\TransactionalEmailsApi;
-// use GuzzleHttp\Client;
-// use SendinBlue\Client\Model\SendSmtpEmail;
 class DevsController extends Controller
 {
     public function index(){
@@ -25,6 +21,7 @@ class DevsController extends Controller
             asset('css/devs.css')
         ];
         $scripts = [
+            asset('js/particles.min.js'),
             asset('js/app.js')
         ];
         $params = compact('styleSheets', 'scripts');
