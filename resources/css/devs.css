@@ -1,0 +1,98 @@
+.textSection{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 16px;
+  padding: 2em;
+  background-color: #1D1D1D;
+}
+
+.textSection > a{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.textSection h1{
+  color: white;
+  font-family: var(--fontTitle);
+  text-transform: uppercase;
+  font-size: 2.75em;
+  text-align: center;
+}
+
+.textSection h2{
+  color: var(--orange, black);
+  font-family: var(--fontTitle);
+  font-weight: 500;
+  font-size: 1.65em;
+  font-size: 1.25em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.textSection p{
+  color: #333333;
+  color: #d2d2d2;
+  font-family: var(--fontText);
+  margin: 0;
+  font-size: 1.15em;
+  font-weight: 300;
+  text-align: center;
+  width: 60%;
+}
+
+#contactButton{
+  font-size: 1em;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-family: var(--fontText);
+  font-weight: 300;
+  padding: .75em;
+  border: .05em #454545 solid;
+  border-radius: .3em;
+  transition: 0.1s;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+#contactButton:hover{
+  background-color: #454545;
+  transition: 0.1s;
+}
+
+@media screen and (max-width: 600px){
+  .textSection h1{
+    font-size: 2.35em;
+  }
+
+  .textSection p{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .textSection h1{
+    font-size: 2em;
+  }
+
+  .textSection{
+    font-size: 14px;
+  }
+
+  .textSection p{
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .textSection h1{
+    font-size: 1.6em;
+  }
+
+  .textSection{
+    font-size: 12px;
+  }
+}
+

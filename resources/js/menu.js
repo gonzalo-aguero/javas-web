@@ -74,38 +74,34 @@ function scrollToSection() {
     let doScroll = true;
     let element;
     let elementY;
-
     switch (hash) {
         case '#_hello':
             element = document.getElementById('hello');
-            elementY = element.offsetTop;
-            y = elementY - 100;
             break;
         case "#_aboutUs":
             element = document.getElementById("aboutUs");
-            elementY = element.offsetTop;
-            y = elementY - 100;
             break;
         case "#_services":
             element = document.getElementById("services");
-            elementY = element.offsetTop;
-            y = elementY - 100;
             break;
         case "#_projects":
             element = document.getElementById("ourProjects");
-            elementY = element.offsetTop;
-            y = elementY - 100;
             break;
         case "#_contact":
             element = document.getElementById("contact");
-            elementY = element.offsetTop;
-            y = elementY - 100;
+            break;
+        case "#_developers":
+            element = document.getElementById("developers");
             break;
         case "#_":
             doScroll = false;
             break;
     }
     if(doScroll){
+        if(element !== undefined){
+            elementY = element.offsetTop;
+            y = elementY - 100;
+        }
         scrollTo(0,y);
     }
 }

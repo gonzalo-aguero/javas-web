@@ -84,7 +84,7 @@ function init(){
         coverPage_title = document.querySelector('#coverPageText > h1');
         coverPage_text = document.querySelector('#coverPageText > p');
         coverPage_startButton = document.getElementById('startButton');
-        coverPage_startButton.addEventListener('click', start);
+        coverPage_startButton.addEventListener('click', startDevs);
         coverPageAnim();
     }
     window.addEventListener("scroll", scrollEventsHandler);
@@ -128,6 +128,10 @@ function scrollEventsHandler() {
 }
 function start(){
     window.location.hash = '#_hello';
+    setTimeout(()=> location.hash = "_", 1000);
+}
+function startDevs(){
+    window.location.hash = '#_developers';
     setTimeout(()=> location.hash = "_", 1000);
 }
 function coverPageAnim(){

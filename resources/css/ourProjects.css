@@ -25,7 +25,7 @@
   width: 33.33%;
   height: 15em;
   position: relative;
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 .projects .project::after{
   content: "";

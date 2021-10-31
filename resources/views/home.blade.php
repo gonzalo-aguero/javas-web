@@ -7,7 +7,7 @@ Buscamos ofrecer a nuestros clientes el mejor servicio, pensando siempre en la m
 @section('content')
     <section id="coverPage" style="
             background: linear-gradient(270deg, rgba(14, 70, 136, 0.6) 0%, rgba(254, 165, 1, 0.6) 100%),
-            url({{asset('img/design/coverpage.jpg')}});
+            url({{asset('img/design/coverpage-home.jpg')}});
             background-size: cover;
             background-position: center center;
         ">
@@ -116,18 +116,18 @@ Buscamos ofrecer a nuestros clientes el mejor servicio, pensando siempre en la m
     <section id="ourProjects">
         <h2 class="animate__animated" id="ourProjectsTitle">ALGUNOS DE NUESTROS PROYECTOS</h2>
         <div class="projects">
-            <div class="project i0 animate__animated">
+            <a href="https://bskelevadores.com" target="_blank" class="project i0 animate__animated">
                 <img src="{{asset('img/projects/BSK Elevadores.jpg')}}" alt="BSK Elevadores">
                 <h4>SITIO WEB: DISEÑO + DESARROLLO</h4>
-            </div>
-            <div class="project i1 animate__animated">
+            </a>
+            <a href="https://anubisinsumos.com" target="_blank" class="project i1 animate__animated">
                 <img src="{{asset('img/projects/Anubis Insumos.jpg')}}" alt="Anubis Insumos">
                 <h4>TIENDA ONLINE: DESARROLLO</h4>
-            </div>
-            <div class="project i2 animate__animated">
+            </a>
+            <a href="https://bgatransporte.com" target="_blank" class="project i2 animate__animated">
                 <img src="{{asset('img/projects/BGA Transporte.jpg')}}" alt="BGA Transporte">
                 <h4>SITIO WEB: DISEÑO + DESARROLLO</h4>
-            </div>
+            </a>
         </div>
     </section>
     <section id="workflow">
@@ -187,7 +187,7 @@ Buscamos ofrecer a nuestros clientes el mejor servicio, pensando siempre en la m
                     <option value="" selected>Seleccionar motivo</option>
                     <option value="Sitio web">Sitio web</option>
                     <option value="Tienda online">Tienda online (ecommerce)</option>
-                    <option value="Apps">Aplicaciones</option>
+                    <option value="Apps">Apps móviles</option>
                     <option value="Soy desarrollador">Servicio para desarrolladores</option>
                     <option value="Otro">Otro</option>
                 </select>

@@ -47,11 +47,11 @@
                     <li><a href="#_contact">Contacto<a></li>
                     <li><a href="{{route('devs')}}">Desarrollador<a></li>
                 @else
-                    <li><a href="{{route('home')}}#">Home<a></li>
-                    <li><a href="{{route('home')}}#_aboutUs">Nosotros<a></li>
-                    <li><a href="{{route('home')}}#_services">Servicios<a></li>
-                    <li><a href="{{route('home')}}#_projects">Trabajos<a></li>
-                    <li><a href="{{route('home')}}#_contact">Contacto<a></li>
+                    <li><a href="{{route('home')}}/#">Home<a></li>
+                    <li><a href="{{route('home')}}/#_aboutUs">Nosotros<a></li>
+                    <li><a href="{{route('home')}}/#_services">Servicios<a></li>
+                    <li><a href="{{route('home')}}/#_projects">Trabajos<a></li>
+                    <li><a href="{{route('home')}}/#_contact">Contacto<a></li>
                     <li><a href="{{route('devs')}}">Desarrollador<a></li>
                 @endif
             </ul>
