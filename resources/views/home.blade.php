@@ -216,7 +216,7 @@ Buscamos ofrecer a nuestros clientes el mejor servicio, pensando siempre en la m
                 @error('message')
                     <small>{{$message}}</small>
                 @enderror
-                <input type="submit" value="Enviar">
+                <input type="submit" value="Enviar" disabled>
                 @if (session('info'))
                     <script>
                         setTimeout(()=> alert("{{session('info')}}"), 1200);

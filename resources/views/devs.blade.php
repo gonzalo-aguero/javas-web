@@ -35,7 +35,7 @@
     <section class="textSection i3">
         <h2>Si estás interesado:</h2>
         <p>No dudes en contactarnos, te contaremos acerca de nuestra propuesta bien a detalle
-            para que comprendas cada uno de los puntos.</p>
+            para que comprendas nuestro flujo de trabajo.</p>
         <a href="{{route('home')}}/#_contact" id="contactButton">CONTACTAR</a>
     </section>
 @endsection

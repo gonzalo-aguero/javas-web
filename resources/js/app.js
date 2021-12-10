@@ -9,6 +9,7 @@ window.onload = ()=>{
     animationsHandler.init();
     menu.init();
     whatsappButton.init();
+    document.querySelector('#contactForm input[type="submit"]').disabled = false;
 };
 particlesJS({
     "particles": {
