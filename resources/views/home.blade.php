@@ -192,34 +192,54 @@ Buscamos ofrecer a nuestros clientes el mejor servicio, pensando siempre en la m
                     <option value="Otro">Otro</option>
                 </select>
                 @error('service')
-                    <small>{{$message}}</small>
+                    <small style="color: red;">{{$message}}</small>
+                    <script>
+                        location.hash = "#_contact";
+                    </script>
                 @enderror
                 <div>
                     <input type="text" name="name" id="name" placeholder="Nombre" value="{{old('name')}}">
                     @error('name')
-                        <small>{{$message}}</small>
+                        <small style="color: red;">{{$message}}</small>
+                        <script>
+                            location.hash = "#_contact";
+                        </script>
                     @enderror
                     <input type="text" name="company" id="company" placeholder="Empresa" value="{{old('company')}}">
                     @error('company')
-                        <small>{{$message}}</small>
+                        <small style="color: red;">{{$message}}</small>
+                        <script>
+                            location.hash = "#_contact";
+                        </script>
                     @enderror
                     <input type="email" name="email" id="email" placeholder="Correo electrónico" value="{{old('email')}}">
                     @error('email')
-                        <small>{{$message}}</small>
+                        <small style="color: red;">{{$message}}</small>
+                        <script>
+                            location.hash = "#_contact";
+                        </script>
                     @enderror
                     <input type="tel" name="telephone" id="telephone" placeholder="Teléfono" value="{{old('telephone')}}">
                     @error('telephone')
-                        <small>{{$message}}</small>
+                        <small style="color: red;">{{$message}}</small>
+                        <script>
+                            location.hash = "#_contact";
+                        </script>
                     @enderror
                 </div>
                 <textarea name="message" id="message" placeholder="Mensaje">{{old('message')}}</textarea>
                 @error('message')
-                    <small>{{$message}}</small>
+                    <small style="color: red;">{{$message}}</small>
+                    <script>
+                        location.hash = "#_contact";
+                    </script>
                 @enderror
                 <input type="submit" value="Enviar" disabled>
                 @if (session('info'))
                     <script>
-                        setTimeout(()=> alert("{{session('info')}}"), 1200);
+                        setTimeout(()=>{
+                            alert("{{session('info')}}");
+                        }, 1200);
                     </script>
                 @endif
             </form>
