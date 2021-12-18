@@ -5,7 +5,6 @@
 /javasweb-backend/vendor
 .env
 /javasweb-backend/.env
-/public_html/blog/.env
 .env.backup
 .phpunit.result.cache
 docker-compose.override.yml
@@ -15,4 +14,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-/public_html/blog/
+/public_html/blog/wp-config.php
+/public_html/blog/.env
