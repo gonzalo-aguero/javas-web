@@ -31,8 +31,8 @@ if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
 |
 */
 
-require __DIR__.'/../vendor/autoload.php';//local
-// require __DIR__.'/../../JavasWeb/vendor/autoload.php';//production
+// require __DIR__.'/../vendor/autoload.php';//local
+require __DIR__.'/../javasweb-backend/vendor/autoload.php';//production
 
 /*
 |--------------------------------------------------------------------------
@@ -45,8 +45,13 @@ require __DIR__.'/../vendor/autoload.php';//local
 |
 */
 
-$app = require_once __DIR__.'/../bootstrap/app.php';//local
-// $app = require_once __DIR__.'/../../JavasWeb/bootstrap/app.php';//production.
+// $app = require_once __DIR__.'/../bootstrap/app.php';//local
+$app = require_once __DIR__.'/../javasweb-backend/bootstrap/app.php';//production.
+
+// Set the public path to this directory
+$app->bind('path.public', function() {
+    return __DIR__;
+});
 
 $kernel = $app->make(Kernel::class);
 

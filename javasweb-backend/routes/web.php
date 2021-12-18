@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\DevsController;
 use App\Http\Controllers\MailController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

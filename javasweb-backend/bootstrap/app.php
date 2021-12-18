@@ -40,10 +40,10 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
-//public_path (for production)
-// $app->bind('path.public',function(){
-//     return realpath('./../public/');
-//  });
+//public path (for production)
+$app->bind('path.public',function(){
+    return realpath('../../public_html/');
+});
 /*
 |--------------------------------------------------------------------------
 | Return The Application

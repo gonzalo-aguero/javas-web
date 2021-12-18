@@ -11,10 +11,10 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
+mix.js('javasweb-backend/resources/js/app.js', 'public_html/js')
+    .postCss('javasweb-backend/resources/css/app.css', 'public_html/css', [
         require('tailwindcss')
     ])
-    .postCss('resources/css/devs.css', 'public/css', [
+    .postCss('javasweb-backend/resources/css/devs.css', 'public_html/css', [
         require('tailwindcss')
     ]);
