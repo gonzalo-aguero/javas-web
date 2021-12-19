@@ -21,5 +21,5 @@
 </IfModule>
 
 # Quitar el www del nombre de dominio (para produccion)
-# RewriteCond %{HTTP_HOST} ^www\.javasweb\.com$ [NC]
-# RewriteRule ^(.*)$ https://javasweb.com/$1 [R=301,QSA,L]
+RewriteCond %{HTTP_HOST} ^www\.javasweb\.com$ [NC]
+RewriteRule ^(.*)$ https://javasweb.com/$1 [R=301,QSA,L]
