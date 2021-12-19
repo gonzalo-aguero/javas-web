@@ -5,7 +5,9 @@
 
 
 // default template first sections
-.ct-elementor-default-template .site-main {
+
+// .ct-elementor-default-template .site-main,
+.ct-elementor-default-template {
 
 	.elementor-top-section:not(.ct-section-stretched) {
 		margin-left: var(--has-wide, auto);
@@ -14,11 +16,9 @@
 		max-width: var(--block-max-width, var(--container-max-width));
 	}
 
-	section.elementor-section {
-		&.elementor-section-boxed > .elementor-container {
-			width: var(--block-width, var(--container-width));
-			max-width: var(--block-max-width, var(--container-max-width));
-		}
+	.elementor-section-boxed > .elementor-container {
+		width: var(--block-width, var(--container-width));
+		max-width: var(--block-max-width, var(--container-max-width));
 	}
 	
 }

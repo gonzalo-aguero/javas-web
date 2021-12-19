@@ -30,7 +30,8 @@
 
 [class*="ct-toggle-close"] {
 	top: var(--toggle-button-top, initial);
-	inset-inline-end: var(--toggle-button-inset-end, 0);
+	right: var(--toggle-button-inset-end, 0);
+	// inset-inline-end: var(--toggle-button-inset-end, 0);
 
 	--icon-size: 12px;
 	--icon-color: rgba(255, 255, 255, 0.7);

@@ -12,6 +12,11 @@
 	}
 
 	// menu
+	.ct-toggle-dropdown-desktop-ghost {
+		right: initial;
+		left: var(--toggle-ghost-inset-end, calc(var(--menu-items-spacing, 25px) / 2 + 13px));
+	}
+
 	// [class*="header-menu"] {
 	// 	&[data-type="type-1"] > ul > li {
 	// 		&:first-child > a {
@@ -50,6 +55,10 @@
 
 
 	// mobile menu
+	.mobile-menu [class*="children"] > ul li a:before {
+		left: initial;
+		right: -30px;
+	}
 	// .mobile-menu[data-type*="type-1"] ul [class*="children"] > ul {
 	// 	li a:before {
 	// 		left: initial;
@@ -66,6 +75,10 @@
 
 
 	// advanced menu
+	.ct-mega-menu-full-width > .sub-menu:after {
+		left: 0;
+		right: 50%;
+	}
 	// .menu > [class*='ct-mega-menu'] {
 	// 	> .sub-menu > li {
 	// 		&:first-child {
@@ -704,6 +717,12 @@
 		left: initial;
 	}
 
+	// close toggle
+	[class*="ct-toggle-close"] {
+		right: initial;
+		left: var(--toggle-button-inset-end, 0);
+	}
+
 	// quick view
 	.ct-quick-view-card {
 
@@ -718,11 +737,6 @@
 			padding-right: initial;
 			padding-left: 40px;
 		}
-
-		// .ct-toggle-close {
-		// 	left: var(--right, -10px);
-		// 	right: initial;
-		// }
 	}
 
 	// filter trigger

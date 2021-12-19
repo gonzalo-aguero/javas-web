@@ -89,7 +89,8 @@
 .ct-toggle-dropdown-desktop-ghost {
 	pointer-events: none;
 	flex: 0 0 var(--toggle-button-size, 18px);
-	inset-inline-end: var(--toggle-ghost-inset-end, calc(var(--menu-items-spacing, 25px) / 2 + 13px));
+	right: var(--toggle-ghost-inset-end, calc(var(--menu-items-spacing, 25px) / 2 + 13px));
+	// inset-inline-end: var(--toggle-ghost-inset-end, calc(var(--menu-items-spacing, 25px) / 2 + 13px));
 
 	--toggle-button-size: 18px;
 	--toggle-button-margin-end: -18px;

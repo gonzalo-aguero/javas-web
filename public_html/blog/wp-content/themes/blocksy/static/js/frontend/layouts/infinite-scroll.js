@@ -50,6 +50,11 @@ export const mount = (paginationContainer) => {
 					ctEvents.trigger('ct:infinite-scroll:load')
 					ctEvents.trigger('blocksy:frontend:init')
 					ctEvents.trigger('blocksy:parallax:init')
+					if (window.jQuery) {
+						jQuery(document.body).trigger(
+							'wc_price_based_country_ajax_geolocation'
+						)
+					}
 				}, 100)
 			})
 

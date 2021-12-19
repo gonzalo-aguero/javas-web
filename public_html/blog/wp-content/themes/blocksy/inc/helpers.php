@@ -23,28 +23,28 @@ add_filter('body_class', function ($classes) {
 	if (in_array('elementor-default', $classes)) {
 		$current_template = blocksy_manager()->get_current_template();
 
-		if (strpos($current_template, 'elementor') !== false) {
-			if (
-				is_singular()
-				&&
-				class_exists('\ElementorPro\Modules\ThemeBuilder\Module')
-			) {
-				$location_documents = \ElementorPro\Modules\ThemeBuilder\Module::instance()
-					->get_conditions_manager()
-					->get_documents_for_location(
-						'single'
-					);
+		if (
+			strpos($current_template, 'elementor') !== false
+			&&
+			is_singular()
+			&&
+			class_exists('\ElementorPro\Modules\ThemeBuilder\Module')
+		) {
+			$location_documents = \ElementorPro\Modules\ThemeBuilder\Module::instance()
+				->get_conditions_manager()
+				->get_documents_for_location(
+					'single'
+				);
 
-				$first_key = key($location_documents);
+			$first_key = key($location_documents);
 
-				if (! empty($location_documents)) {
-					$theme_document = $location_documents[$first_key];
+			if (! empty($location_documents)) {
+				$theme_document = $location_documents[$first_key];
 
-					$document_page_template = $theme_document->get_settings('page_template');
+				$document_page_template = $theme_document->get_settings('page_template');
 
-					if (empty($document_page_template)) {
-						$classes[] = 'ct-elementor-default-template';
-					}
+				if (empty($document_page_template)) {
+					$classes[] = 'ct-elementor-default-template';
 				}
 			}
 		} else {

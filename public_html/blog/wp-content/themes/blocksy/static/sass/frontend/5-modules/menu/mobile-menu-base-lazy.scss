@@ -7,7 +7,8 @@
 					position: absolute;
 					content: '';
 					top: calc(50% - 2px);
-					inset-inline-start: -30px;
+					left: -30px;
+					// inset-inline-start: -30px;
 					width: 3px;
 					height: calc(3px * var(--has-indentation, 1));
 					opacity: 0.3;

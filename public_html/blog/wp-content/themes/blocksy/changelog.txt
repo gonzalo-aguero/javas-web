@@ -1,3 +1,11 @@
+1.8.11: 2021-12-18
+- Improvement: Toggle close button minor CSS improvements
+- Improvement: Sticky state header minor CSS improvements
+
+1.8.10: 2021-12-17
+- New: Integration with WooCommerce Price Based on Country
+- Improvement: Elementor default template layout CSS improvements
+
 1.8.9: 2021-12-16
 - Improvement: Windows browsers viewport shift when overlay/modal is active
 - Fix: Header menu dropdown indicator color when Elementor template kit is active
